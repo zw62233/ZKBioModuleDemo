@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:sharedUserId="${SHARED_USER_ID}"
+    tools:ignore="LockedOrientationActivity">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="29" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="29" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.usb.host"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:name=".activity.base.ExApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/desktop_logo"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/desktop_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.MainActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|keyboardHidden|density|layoutDirection|fontScale|uiMode|mcc|mnc"
+            android:exported="true"/>
+        <activity
+            android:name=".activity.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.ArmaturaPortActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|keyboardHidden|density|layoutDirection|fontScale|uiMode|mcc|mnc"
+            android:exported="true" />
+        <activity
+            android:name=".activity.ArmaturaActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|keyboardHidden|density|layoutDirection|fontScale|uiMode|mcc|mnc"
+            android:exported="true" />
+        <activity
+            android:name=".activity.AddNewUserActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.PhotoListActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.BioTemplateRegisterActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.UserDetailActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.BioRecognizeSettingActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.SystemSettingActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.AboutActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".activity.UserManageActivity" />
+        <activity android:name="com.armatura.internaldata.activity.ModuleUserManageActivity" />
+        <activity android:name="com.armatura.internaldata.activity.ModuleAddNewUserActivity" />
+        <activity android:name="com.armatura.internaldata.activity.ModuleUserDetailActivity" />
+        <activity android:name="com.armatura.internaldata.activity.ModuleRegisterOperateActivity" />
+
+        <receiver
+            android:name=".BootReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
