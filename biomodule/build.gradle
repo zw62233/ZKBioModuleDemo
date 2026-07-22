@@ -1,0 +1,101 @@
+import java.text.SimpleDateFormat
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply from: '../Sign.gradle'
+
+static def getTime() {
+    return new SimpleDateFormat("yyyyMMdd").format(new Date())
+}
+
+android {
+    ndkVersion "21.0.6113669"
+
+    applicationVariants.configureEach { variant ->
+        variant.outputs.configureEach { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                def fileName = "AMTMultiBioDemo" + variant.productFlavors[0].name + "_" + variant.productFlavors[1].name + "_" + buildType.name + "_" + defaultConfig.versionName + ".apk"
+                outputFileName = fileName
+            }
+        }
+    }
+
+    packagingOptions {
+        doNotStrip "*/armeabi-v7a/*.so"
+        doNotStrip "*/arm64-v8a/*.so"
+    }
+    namespace 'com.armatura.biomodule'
+    compileSdkVersion = 34
+    defaultConfig {
+        applicationId "com.armatura.biomodule"
+        minSdkVersion 22
+        targetSdkVersion 34
+        versionCode 1
+        versionName "1.2.89-" + getTime() + ".alpha"
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+
+
+    packagingOptions {
+        exclude 'META-INF/proguard/coroutines.pro'
+    }
+
+    buildFeatures {
+        dataBinding true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+    flavorDimensions = ["brand", 'device']
+    productFlavors {
+        amt_fam30 {
+            dimension 'brand'
+        }
+        
+        general {
+            dimension 'device'
+            signingConfig signingConfigs.DEMO
+            manifestPlaceholders.put("SHARED_USER_ID", "")
+        }
+    }
+    sourceSets {
+        amt_fam30.res.srcDirs = ['src/main/res']
+        general {
+            java.srcDir('src/general/java')
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+    implementation 'org.nanohttpd:nanohttpd:2.3.1'
+    implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
+    implementation 'com.google.zxing:core:3.3.0'
+
+    implementation 'com.google.code.gson:gson:2.10.1'
+
+    implementation project(path: ':numberprogressbar')
+    //super dialog!!!
+    implementation 'com.lxj:xpopup:1.8.10'
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0'
+
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.8.7'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7'
+    implementation "androidx.fragment:fragment-ktx:1.8.5"
+}
