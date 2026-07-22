@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:CustomSettingLayout="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.armatura.biomodule.activity.UserManageActivity">
+
+        <LinearLayout
+            android:id="@+id/tab3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            CustomSettingLayout:layout_constraintBottom_toBottomOf="parent"
+            CustomSettingLayout:layout_constraintEnd_toEndOf="parent"
+            CustomSettingLayout:layout_constraintStart_toStartOf="parent"
+            CustomSettingLayout:layout_constraintTop_toTopOf="parent">
+
+            <com.armatura.biomodule.view.ToolBar
+                android:id="@+id/my_tool_bar"
+                style="@style/tool_bar_with_back_style"
+                CustomSettingLayout:toolbar_title="@string/tool_panel_users" />
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/sv_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:queryHint="@string/search_user" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView_RegedFace"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_add_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            CustomSettingLayout:layout_constraintBottom_toBottomOf="parent"
+            CustomSettingLayout:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_add_user"
+            tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_import_face_from_new_db"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            CustomSettingLayout:layout_constraintBottom_toBottomOf="parent"
+            CustomSettingLayout:layout_constraintEnd_toStartOf="@+id/fab_add_user"
+            app:srcCompat="@drawable/ic_import_database_of_new_struct"
+            tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_import_face_from_old_db"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            CustomSettingLayout:layout_constraintBottom_toTopOf="@id/fab_import_face_from_new_db"
+            CustomSettingLayout:layout_constraintEnd_toStartOf="@+id/fab_add_user"
+            app:srcCompat="@drawable/ic_import_database_of_old"
+            tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_batch_add_palm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            CustomSettingLayout:layout_constraintBottom_toBottomOf="parent"
+            CustomSettingLayout:layout_constraintEnd_toStartOf="@id/fab_import_face_from_new_db"
+            app:srcCompat="@drawable/ic_import_palm"
+            tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_batch_add_palm_and_vein"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            CustomSettingLayout:layout_constraintBottom_toTopOf="@id/fab_batch_add_palm"
+            CustomSettingLayout:layout_constraintEnd_toStartOf="@id/fab_import_face_from_new_db"
+            app:srcCompat="@drawable/ic_import_palm_print_and_vein"
+            tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_export_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:contentDescription="@string/export_user"
+            CustomSettingLayout:layout_constraintBottom_toBottomOf="parent"
+            CustomSettingLayout:layout_constraintEnd_toStartOf="@id/fab_batch_add_palm"
+            app:srcCompat="@drawable/ic_export"
+            tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_import_mx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:contentDescription="@string/export_user"
+            CustomSettingLayout:layout_constraintBottom_toBottomOf="parent"
+            CustomSettingLayout:layout_constraintEnd_toStartOf="@id/fab_batch_add_palm"
+            app:srcCompat="@drawable/import_face_mx"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

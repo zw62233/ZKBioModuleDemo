@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/amt_bg_color">
+
+        <com.armatura.biomodule.view.ToolBar
+            android:id="@+id/my_tool_bar"
+            style="@style/tool_bar_with_back_style"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:left_button_visible="true"
+            app:right_button_visible="false"
+            app:toolbar_title="Feature Photo" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/photo_list_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/my_tool_bar"
+            app:spanCount="3" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

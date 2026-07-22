@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:CustomSettingLayout="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.armatura.biomodule.config.Config" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.armatura.biomodule.activity.BioRecognizeSettingActivity">
+
+        <com.armatura.biomodule.view.ToolBar
+            android:id="@+id/faceRecognizeToolBar"
+            style="@style/tool_bar_with_back_style"
+            CustomSettingLayout:layout_constraintStart_toStartOf="parent"
+            CustomSettingLayout:layout_constraintTop_toTopOf="parent"
+            CustomSettingLayout:toolbar_title="@string/bio_recognize_setting_title" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/bioParameterSrl"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            CustomSettingLayout:layout_constraintBottom_toBottomOf="parent"
+            CustomSettingLayout:layout_constraintEnd_toEndOf="parent"
+            CustomSettingLayout:layout_constraintStart_toStartOf="parent"
+            CustomSettingLayout:layout_constraintTop_toBottomOf="@id/faceRecognizeToolBar">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="settings">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/root_config_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <ViewStub
+                        android:id="@+id/device_settings_layout_viw_stub"
+                        android:inflatedId="@+id/device_settings_layout_viw_stub"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout="@layout/layout_device_settings" />
+
+                    <ViewStub
+                        android:id="@+id/common_settings_layout_viw_stub"
+                        android:inflatedId="@+id/common_settings_layout_viw_stub"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout="@layout/layout_common_settings" />
+
+                    <ViewStub
+                        android:id="@+id/face_settings_layout_viw_stub"
+                        android:inflatedId="@+id/face_settings_layout_viw_stub"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout="@layout/layout_face_settings" />
+
+                    <ViewStub
+                        android:id="@+id/face_capture_filter_layout_viw_stub"
+                        android:inflatedId="@+id/face_capture_filter_layout_viw_stub"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout="@layout/layout_capture_filter_settings" />
+
+                    <ViewStub
+                        android:id="@+id/palm_settings_layout_viw_stub"
+                        android:inflatedId="@+id/palm_settings_layout_viw_stub"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout="@layout/layout_palm_settings" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </ScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

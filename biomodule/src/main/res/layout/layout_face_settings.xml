@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:CustomSettingLayout="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="FaceSettings"
+            type="com.armatura.biomodule.pojo.setting.FaceSettings" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/SubNameStyle_Port"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:text="@string/face_settings_title" />
+
+        <com.armatura.biomodule.view.CustomSettingSwitchLayout
+            android:id="@+id/faceAESwitch"
+            customChecked="@{FaceSettings.faceAEEnabled,default=false}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            CustomSettingLayout:setting_key="faceAEEnabled"
+            CustomSettingLayout:setting_title="@string/camcfg_faceae_enable" />
+
+        <com.armatura.biomodule.view.CustomSettingSwitchLayout
+            android:id="@+id/trackMatchSwitchView"
+            customChecked="@{FaceSettings.isTrackingMatchMode,default=false}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            CustomSettingLayout:setting_hint="@string/config_match_mode"
+            CustomSettingLayout:setting_title="@string/config_match_mode" />
+
+
+        <com.armatura.biomodule.view.CustomSettingSwitchLayout
+            android:id="@+id/maxFaceSwitchView"
+            customChecked="@{FaceSettings.maxFaceEnable,default=false}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            CustomSettingLayout:setting_hint="@string/max_face_enable_tips"
+            CustomSettingLayout:setting_title="@string/max_face_enable" />
+
+
+        <com.armatura.biomodule.view.CustomSettingSpinnerLayout
+            android:id="@+id/livenessModeSpinner"
+            set_liveness_mode="@{FaceSettings.livenessMode,default=0}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            CustomSettingLayout:setting_spinner_entries="@array/liveness_mode_array"
+            CustomSettingLayout:setting_title="@string/liveness_mode" />
+
+        <com.armatura.biomodule.view.CustomSettingLayout
+            android:id="@+id/singleLensLivenessThresholdSetView"
+            setting_value="@{FaceSettings.singleLensLivenessThreshold,default=0}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            CustomSettingLayout:setting_title="@string/single_lens_liveness_threshold" />
+
+
+        <com.armatura.biomodule.view.CustomSettingLayout
+            android:id="@+id/dualLensLivenessThresholdSetView"
+            setting_value="@{FaceSettings.dualLensLivenessThreshold,default=0}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            CustomSettingLayout:setting_title="@string/dual_lens_liveness_threshold" />
+
+
+        <com.armatura.biomodule.view.CustomSettingSwitchLayout
+            android:id="@+id/attributeRecogSwitchView"
+            customChecked="@{FaceSettings.attributeRecog,default=false}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            CustomSettingLayout:setting_key="attributeRecog"
+            CustomSettingLayout:setting_title="@string/attribute_recognize" />
+
+        <com.armatura.biomodule.view.CustomSettingLayout
+            android:id="@+id/attrIntervalSetView"
+            setting_value="@{FaceSettings.attrInterval}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            CustomSettingLayout:setting_key="attrInterval"
+            CustomSettingLayout:setting_title="@string/face_attr_recognize_interval" />
+
+
+        <com.armatura.biomodule.view.CustomSettingLayout
+            android:id="@+id/recognizeThresholdSetView"
+            setting_value="@{FaceSettings.recogThreshold,default=0}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            CustomSettingLayout:setting_hint="@string/rang_0_to_1"
+            CustomSettingLayout:setting_key="recognize_threshold"
+            CustomSettingLayout:setting_title="@string/config_threshold" />
+
+        <com.armatura.biomodule.view.CustomSettingLayout
+            android:id="@+id/faceVerifyThresholdSetView"
+            setting_value="@{FaceSettings.verifyThreshold,default=0}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            CustomSettingLayout:setting_hint="@string/rang_0_to_1"
+            CustomSettingLayout:setting_title="@string/face_verify_threshold" />
+
+        <com.armatura.biomodule.view.CustomSettingLayout
+            android:id="@+id/recogIntervalSetView"
+            setting_value="@{FaceSettings.recogInterval,default=0}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            CustomSettingLayout:setting_key="recogInterval"
+            CustomSettingLayout:setting_title="@string/recognize_interval" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:CustomSettingLayout="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="DeviceSettings"
+            type="com.armatura.biomodule.pojo.setting.DeviceSettings" />
+    </data>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/SubNameStyle_Port"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:text="@string/device_setting_title" />
+
+
+        <com.armatura.biomodule.view.CustomSettingLayout
+            android:id="@+id/attendIntervalSetView"
+            setting_value="@{DeviceSettings.attendInterval,default=0}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            CustomSettingLayout:setting_key="attendInterval"
+            CustomSettingLayout:setting_title="@string/attend_interval" />
+
+
+        <com.armatura.biomodule.view.CustomSettingSwitchLayout
+            android:id="@+id/save_attendance_switch_view"
+            customChecked="@{DeviceSettings.enableStoreAttendLog,default=false}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            CustomSettingLayout:setting_hint="@string/is_enable_attendance_log_save_in_module"
+            CustomSettingLayout:setting_title="@string/save_attendance_log" />
+
+        <com.armatura.biomodule.view.CustomSettingSwitchLayout
+            android:id="@+id/save_stranger_attendance_switch_view"
+            customChecked="@{DeviceSettings.enableStoreStrangerAttLog,default=false}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            CustomSettingLayout:setting_hint="@string/is_enable_strange_att_log"
+            CustomSettingLayout:setting_title="@string/save_strange_att_Log" />
+
+
+        <com.armatura.biomodule.view.CustomSettingSpinnerLayout
+            android:id="@+id/sensorFrameSpinner"
+            set_sensor_frame="@{DeviceSettings.sensorFrameRate,default=15}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            CustomSettingLayout:setting_spinner_entries="@array/sensor_frame_rate_array"
+            CustomSettingLayout:setting_title="@string/sensor_frame_rate" />
+
+
+        <com.armatura.biomodule.view.CustomSettingSwitchLayout
+            android:id="@+id/pushPhotoEnableSwitchView"
+            customChecked="@{DeviceSettings.pushPhotoEnable,default=false}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            CustomSettingLayout:setting_hint="@string/push_photo_enable_tips"
+            CustomSettingLayout:setting_title="@string/push_photo_enable" />
+
+        <com.armatura.biomodule.view.CustomSettingSpinnerLayout
+            android:id="@+id/videoStreamModeSpinner"
+            set_led_breath_type="@{DeviceSettings.videoStreamMode,default=0}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            CustomSettingLayout:setting_spinner_entries="@array/video_stream_mode_type_array"
+            CustomSettingLayout:setting_title="@string/video_stream_mode_title" />
+
+        <com.armatura.biomodule.view.CustomSettingSwitchLayout
+            android:id="@+id/standByModeSwitchView"
+            customChecked="@{DeviceSettings.standbyMode,default=false}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            CustomSettingLayout:setting_title="Standby Mode" />
+
+        <com.armatura.biomodule.view.CustomSettingSwitchLayout
+            android:id="@+id/dv_pushDetectionDistanceSwitchView"
+            customChecked="@{DeviceSettings.pushDetectionDistance,default=false}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            CustomSettingLayout:setting_title="Push Detection Distance" />
+
+        <com.armatura.biomodule.view.CustomSettingSpinnerLayout
+            android:id="@+id/ledBreathTypeSpinner"
+            set_led_breath_type="@{DeviceSettings.ledBreathType,default=0}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            CustomSettingLayout:setting_spinner_entries="@array/led_breath_type_array"
+            CustomSettingLayout:setting_title="@string/led_breath_type_title" />
+
+        <com.armatura.biomodule.view.CustomSettingSpinnerLayout
+            android:id="@+id/illuminationTriggerModeSpinner"
+            set_illumination_trigger_mode="@{DeviceSettings.illuminationTriggerMode,default=0}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            CustomSettingLayout:setting_spinner_entries="@array/illumination_trigger_mode_type_array"
+            CustomSettingLayout:setting_title="@string/illumination_trigger_mode_title" />
+
+        <com.armatura.biomodule.view.CustomSettingSpinnerLayout
+            android:id="@+id/ledControlModeSpinner"
+            set_led_control_mode="@{DeviceSettings.ledControlMode,default=1}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            CustomSettingLayout:setting_spinner_entries="@array/led_control_mode_array"
+            CustomSettingLayout:setting_title="@string/led_control_mode_title" />
+
+
+        <com.armatura.biomodule.view.CustomRangeSeekBarLayout
+            android:id="@+id/detectionDistanceSeekBar"
+            fromValue="@{DeviceSettings.minDetectionDistance}"
+            toValue="@{DeviceSettings.maxDetectionDistance}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            CustomSettingLayout:max="180"
+            CustomSettingLayout:min="30"
+            CustomSettingLayout:setting_title="@string/detection_distance" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

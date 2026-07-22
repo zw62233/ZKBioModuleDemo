@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/amt_bg_color"
+        tools:context=".activity.UserDetailActivity">
+
+
+        <SurfaceView
+            android:id="@+id/camera_preview_sv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="720:1280"
+            app:layout_constraintEnd_toStartOf="@id/guideline6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <SurfaceView
+            android:id="@+id/rect_info_sv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/camera_preview_sv"
+            app:layout_constraintEnd_toEndOf="@id/camera_preview_sv"
+            app:layout_constraintStart_toStartOf="@id/camera_preview_sv"
+            app:layout_constraintTop_toTopOf="@id/camera_preview_sv" />
+
+        <com.armatura.biomodule.view.FixRectMask
+            android:id="@+id/enroll_area_rect"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/rect_info_sv"
+            app:layout_constraintEnd_toEndOf="@id/rect_info_sv"
+            app:layout_constraintStart_toStartOf="@id/rect_info_sv"
+            app:layout_constraintTop_toTopOf="@id/rect_info_sv" />
+
+        <com.armatura.biomodule.view.CircleDetectView
+            android:id="@+id/circle_detect_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/enroll_area_rect"
+            app:layout_constraintEnd_toEndOf="@id/enroll_area_rect"
+            app:layout_constraintStart_toStartOf="@id/enroll_area_rect"
+            app:layout_constraintTop_toTopOf="@id/enroll_area_rect" />
+
+        <com.armatura.biomodule.view.ToolBar
+            android:id="@+id/my_tool_bar"
+            style="@style/tool_bar_with_back_style"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:left_button_visible="true"
+            app:right_button_visible="false" />
+
+        <LinearLayout
+            android:id="@+id/ll_progress_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ProgressBar
+                android:id="@+id/register_progress_bar"
+                style="@style/ProgressBar_Mini"
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:id="@+id/register_status_tv"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="@string/do_as_tips"
+                android:textColor="@color/light_green"
+                android:textSize="32sp" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/ll_progress_indicator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guideline6"
+            app:layout_constraintTop_toBottomOf="@id/my_tool_bar">
+
+            <ProgressBar
+                android:id="@+id/progress_extract"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toTopOf="@id/tv_tip1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_tip1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="@string/step1_extract_the_face_template1"
+                android:textColor="@color/amt_text_color"
+                app:layout_constraintBottom_toTopOf="@id/btn_extract_face1"
+                app:layout_constraintEnd_toEndOf="@+id/btn_extract_face1"
+                app:layout_constraintStart_toStartOf="@+id/btn_extract_face1"
+                app:layout_constraintWidth_percent="0.8" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_extract_face1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_light_blue"
+                android:text="@string/press_to_extract"
+                android:textAllCaps="false"
+                android:textColor="@color/amt_text_color"
+                app:layout_constraintBottom_toTopOf="@id/guideline7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintWidth_percent="0.8" />
+
+            <TextView
+                android:id="@+id/tv_tip2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/step2_verify_the_face_template"
+                android:textColor="@color/amt_text_color"
+                app:layout_constraintEnd_toEndOf="@id/btn_verify_face"
+                app:layout_constraintStart_toStartOf="@+id/btn_verify_face"
+                app:layout_constraintTop_toBottomOf="@+id/guideline7"
+                app:layout_constraintWidth_percent="0.8" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_verify_face"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_light_blue"
+                android:text="@string/press_to_verify"
+                android:textAllCaps="false"
+                android:textColor="@color/amt_text_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_tip2"
+                app:layout_constraintWidth_percent="0.8" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

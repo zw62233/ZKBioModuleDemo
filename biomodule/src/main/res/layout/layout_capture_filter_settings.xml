@@ -1,0 +1,127 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:CustomSettingLayout="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="CaptureFilterConfig"
+            type="com.armatura.biomodule.pojo.setting.CaptureFilterConfig" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/SubNameStyle_Port"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:text="@string/face_capture_filter_title" />
+
+        <com.armatura.biomodule.view.CustomSeekBarLayout
+            android:id="@+id/blurThrSetView"
+            default_progress="@{CaptureFilterConfig.blurThreshold}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            CustomSettingLayout:max="100"
+            CustomSettingLayout:min="0"
+            CustomSettingLayout:setting_title="@string/camcfg_threshold_blur" />
+
+        <com.armatura.biomodule.view.CustomSeekBarLayout
+            android:id="@+id/frontFaceThrSetView"
+            default_progress="@{CaptureFilterConfig.frontThreshold}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            CustomSettingLayout:max="100"
+            CustomSettingLayout:min="0"
+            CustomSettingLayout:setting_title="@string/camcfg_threshold_front" />
+
+        <com.armatura.biomodule.view.CustomSeekBarLayout
+            android:id="@+id/qualityThrSetView"
+            default_progress="@{CaptureFilterConfig.scoreThreshold}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            CustomSettingLayout:max="100"
+            CustomSettingLayout:min="0"
+            CustomSettingLayout:setting_title="@string/camcfg_threshold_score" />
+
+        <com.armatura.biomodule.view.CustomRangeSeekBarLayout
+            android:id="@+id/faceDetectHeightRange"
+            fromValue="@{CaptureFilterConfig.heightMinValue}"
+            toValue="@{CaptureFilterConfig.heightMaxValue}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            CustomSettingLayout:max="1280"
+            CustomSettingLayout:min="0"
+            CustomSettingLayout:setting_title="@string/face_detect_height_range" />
+
+        <com.armatura.biomodule.view.CustomRangeSeekBarLayout
+            android:id="@+id/faceDetectWidthRange"
+            fromValue="@{CaptureFilterConfig.widthMinValue}"
+            toValue="@{CaptureFilterConfig.widthMaxValue}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            CustomSettingLayout:max="720"
+            CustomSettingLayout:min="0"
+            CustomSettingLayout:setting_title="@string/face_detect_width_range" />
+
+        <com.armatura.biomodule.view.CustomSeekBarLayout
+            android:id="@+id/maxPitchSetView"
+            default_progress="@{CaptureFilterConfig.pitchMaxValue}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            CustomSettingLayout:max="180"
+            CustomSettingLayout:min="0"
+            CustomSettingLayout:setting_title="@string/camcfg_threshold_pitch_max" />
+
+        <com.armatura.biomodule.view.CustomSeekBarLayout
+            android:id="@+id/minPitchSetView"
+            default_progress="@{CaptureFilterConfig.pitchMinValue}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            CustomSettingLayout:max="180"
+            CustomSettingLayout:min="0"
+            CustomSettingLayout:negative="true"
+            CustomSettingLayout:setting_key="pitchMinValue"
+            CustomSettingLayout:setting_title="@string/camcfg_threshold_pitch_min" />
+
+        <com.armatura.biomodule.view.CustomSeekBarLayout
+            android:id="@+id/maxRollSetView"
+            default_progress="@{CaptureFilterConfig.rollMaxValue}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            CustomSettingLayout:max="180"
+            CustomSettingLayout:min="0"
+            CustomSettingLayout:setting_title="@string/camcfg_threshold_roll_max" />
+
+        <com.armatura.biomodule.view.CustomSeekBarLayout
+            android:id="@+id/minRollSetView"
+            default_progress="@{CaptureFilterConfig.rollMinValue}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            CustomSettingLayout:max="180"
+            CustomSettingLayout:min="0"
+            CustomSettingLayout:negative="true"
+            CustomSettingLayout:setting_title="@string/camcfg_threshold_roll_min" />
+
+        <com.armatura.biomodule.view.CustomSeekBarLayout
+            android:id="@+id/maxYawSetView"
+            default_progress="@{CaptureFilterConfig.yawMaxValue}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            CustomSettingLayout:max="180"
+            CustomSettingLayout:min="0"
+            CustomSettingLayout:setting_title="@string/camcfg_threshold_yaw_max" />
+
+        <com.armatura.biomodule.view.CustomSeekBarLayout
+            android:id="@+id/minYawSetView"
+            default_progress="@{CaptureFilterConfig.yawMinValue}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            CustomSettingLayout:bottom_line_visible="false"
+            CustomSettingLayout:max="180"
+            CustomSettingLayout:min="0"
+            CustomSettingLayout:negative="true"
+            CustomSettingLayout:setting_title="@string/camcfg_threshold_yaw_min" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

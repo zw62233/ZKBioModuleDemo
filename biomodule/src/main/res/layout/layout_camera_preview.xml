@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="state"
+            type="com.armatura.biomodule.common.IdentifyState" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frame_layout_preview"
+        layoutVisibility="@{state}"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000">
+
+        <SurfaceView
+            android:id="@+id/camera_preview_surface_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="720:1280"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SurfaceView
+            android:id="@+id/rect_info_surface_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/camera_preview_surface_view"
+            app:layout_constraintEnd_toEndOf="@+id/camera_preview_surface_view"
+            app:layout_constraintStart_toStartOf="@+id/camera_preview_surface_view"
+            app:layout_constraintTop_toTopOf="@+id/camera_preview_surface_view" />
+
+        <com.armatura.biomodule.view.CircleDetectView
+            android:id="@+id/circle_reflect_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tv_fps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="#FF0000"
+            android:textSize="@dimen/text_size_30sp"
+            app:layout_constraintStart_toStartOf="@id/camera_preview_surface_view"
+            app:layout_constraintTop_toTopOf="@id/camera_preview_surface_view" />
+
+
+        <TextView
+            android:id="@+id/tv_cpu_temp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FF0000"
+            android:maxLines="1"
+            android:textSize="@dimen/text_size_30sp"
+            app:layout_constraintStart_toStartOf="@id/camera_preview_surface_view"
+            app:layout_constraintTop_toBottomOf="@id/tv_fps"
+            />
+
+        <TextView
+            android:id="@+id/tv_extra_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="#FF0000"
+            android:textSize="@dimen/text_size_30sp"
+            app:layout_constraintStart_toStartOf="@id/camera_preview_surface_view"
+            app:layout_constraintTop_toBottomOf="@id/tv_cpu_temp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

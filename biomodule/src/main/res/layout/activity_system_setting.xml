@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:CustomSettingLayout="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="SystemConfig"
+            type="com.armatura.biomodule.config.Config" />
+
+        <variable
+            name="MotionDetectConfig"
+            type="com.armatura.biomodule.pojo.setting.MotionDetectSetting" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.armatura.biomodule.activity.SystemSettingActivity">
+
+        <com.armatura.biomodule.view.ToolBar
+            android:id="@+id/my_tool_bar"
+            style="@style/tool_bar_with_back_style"
+            CustomSettingLayout:toolbar_title="@string/system_setting_title" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/motionDetectSrl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/face_display_settings_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/SubNameStyle_Port"
+                            android:layout_width="match_parent"
+                            android:layout_height="34dp"
+                            android:text="@string/display_display_setting_title" />
+
+                        <com.armatura.biomodule.view.CustomSettingSwitchLayout
+                            android:id="@+id/showFaceInfoSetView"
+                            customChecked="@{SystemConfig.isShowFaceInfo,default=false}"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            CustomSettingLayout:bottom_line_visible="true"
+                            CustomSettingLayout:setting_title="@string/config_show_faceinfo" />
+
+                        <com.armatura.biomodule.view.CustomSettingSwitchLayout
+                            android:id="@+id/showDetailFaceInfoSwitchView"
+                            customChecked="@{SystemConfig.isShowDetailFaceInfo,default=false}"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            CustomSettingLayout:bottom_line_visible="true"
+                            CustomSettingLayout:setting_title="@string/config_show_detail_faceinfo" />
+
+                        <com.armatura.biomodule.view.CustomSettingSwitchLayout
+                            android:id="@+id/showFacePoseSetView"
+                            customChecked="@{SystemConfig.isShowFacePose,default=false}"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            CustomSettingLayout:bottom_line_visible="true"
+                            CustomSettingLayout:setting_title="@string/display_face_pose_info" />
+
+                        <com.armatura.biomodule.view.CustomSettingSwitchLayout
+                            android:id="@+id/showAgeInfoSetView"
+                            customChecked="@{SystemConfig.isShowAgeAttribute,default=false}"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            CustomSettingLayout:bottom_line_visible="true"
+                            CustomSettingLayout:setting_title="@string/display_age_attribute" />
+
+                        <com.armatura.biomodule.view.CustomSettingSwitchLayout
+                            android:id="@+id/showGenderInfoSetView"
+                            customChecked="@{SystemConfig.isShowGenderAttribute,default=false}"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            CustomSettingLayout:bottom_line_visible="true"
+                            CustomSettingLayout:setting_title="@string/display_gender_attribute" />
+
+                        <com.armatura.biomodule.view.CustomSettingSwitchLayout
+                            android:id="@+id/showExpressionInfoSetView"
+                            customChecked="@{SystemConfig.isShowExpressionAttribute,default=false}"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            CustomSettingLayout:bottom_line_visible="true"
+                            CustomSettingLayout:setting_title="@string/display_expression_attribute" />
+
+                        <com.armatura.biomodule.view.CustomSettingSwitchLayout
+                            android:id="@+id/showMustacheInfoSetView"
+                            customChecked="@{SystemConfig.isShowMustacheAttribute,default=false}"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            CustomSettingLayout:bottom_line_visible="true"
+                            CustomSettingLayout:setting_title="@string/display_mustache_attribute" />
+
+                        <com.armatura.biomodule.view.CustomSettingSwitchLayout
+                            android:id="@+id/showGlassesInfoSetView"
+                            customChecked="@{SystemConfig.isShowGlassesAttribute,default=false}"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            CustomSettingLayout:bottom_line_visible="true"
+                            CustomSettingLayout:setting_title="@string/display_glasses_attribute" />
+
+                        <com.armatura.biomodule.view.CustomSettingSwitchLayout
+                            android:id="@+id/showHatInfoSetView"
+                            customChecked="@{SystemConfig.isShowHatAttribute,default=false}"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            CustomSettingLayout:bottom_line_visible="true"
+                            CustomSettingLayout:setting_title="@string/display_hat_attribute" />
+
+                        <com.armatura.biomodule.view.CustomSettingSwitchLayout
+                            android:id="@+id/showMaskInfoSetView"
+                            customChecked="@{SystemConfig.isShowMaskAttribute,default=false}"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            CustomSettingLayout:bottom_line_visible="false"
+                            CustomSettingLayout:setting_title="@string/display_mask_attribute" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    <TextView
+                        style="@style/SubNameStyle_Port"
+                        android:layout_width="match_parent"
+                        android:layout_height="34dp"
+                        android:text="@string/app_config" />
+
+                    <com.armatura.biomodule.view.CustomSettingSpinnerLayout
+                        android:id="@+id/recognizeModelSetView"
+                        set_recognize_mode="@{SystemConfig.recognizeMode}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        CustomSettingLayout:setting_spinner_entries="@array/identification_source_array"
+                        CustomSettingLayout:setting_title="@string/config_app_identification_source" />
+
+                    <com.armatura.biomodule.view.CustomSettingSpinnerLayout
+                        android:id="@+id/sdk_log_level_spinner"
+                        set_sdk_log_level="@{SystemConfig.sdkLogLevel}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        CustomSettingLayout:setting_spinner_entries="@array/sdk_log_level_array"
+                        CustomSettingLayout:setting_title="@string/config_app_sdk_log_level" />
+
+
+                    <com.armatura.biomodule.view.CustomSettingSwitchLayout
+                        android:id="@+id/request_picture_when_register_with_cache_id"
+                        customChecked="@{SystemConfig.isNeedPictureWhenCacheReg,default=false}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        CustomSettingLayout:setting_hint="@string/return_image_when_register"
+                        CustomSettingLayout:setting_title="@string/return_image_when_register" />
+
+                    <com.armatura.biomodule.view.CustomSettingSwitchLayout
+                        android:id="@+id/request_template_when_register_with_cache_id"
+                        customChecked="@{SystemConfig.isNeedFeatureWhenCacheReg,default=false}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        CustomSettingLayout:setting_hint="@string/return_template_when_register"
+                        CustomSettingLayout:setting_title="@string/return_template_when_register" />
+
+                    <com.armatura.biomodule.view.CustomSettingSwitchLayout
+                        android:id="@+id/request_info_when_register_with_cache_id"
+                        customChecked="@{SystemConfig.isNeedInfoWhenCacheReg,default=false}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        CustomSettingLayout:setting_hint="@string/return_info_when_register"
+                        CustomSettingLayout:setting_title="@string/return_info_when_register" />
+
+                    <com.armatura.biomodule.view.CustomSettingSwitchLayout
+                        android:id="@+id/powerSaveModeSwitchView"
+                        customChecked="@{SystemConfig.powerSaveMode,default=false}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        CustomSettingLayout:bottom_line_visible="true"
+                        CustomSettingLayout:setting_title="@string/power_save_mode" />
+
+                    <com.armatura.biomodule.view.CustomSettingSwitchLayout
+                        android:id="@+id/displayLivenessInfoSwitchView"
+                        customChecked="@{SystemConfig.isDisplayLivenessInfo,default=false}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        CustomSettingLayout:bottom_line_visible="true"
+                        CustomSettingLayout:setting_hint="@string/config_display_liveness_info"
+                        CustomSettingLayout:setting_key="@string/config_display_liveness_info"
+                        CustomSettingLayout:setting_title="@string/config_display_liveness_info" />
+
+
+                    <com.armatura.biomodule.view.CustomSettingSwitchLayout
+                        android:id="@+id/displayCPUTempInfoSwitchView"
+                        customChecked="@{SystemConfig.isDisplayCPUTempInfo,default=false}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        CustomSettingLayout:bottom_line_visible="true"
+                        CustomSettingLayout:setting_title="@string/config_display_cpu_temp_info" />
+
+                    <com.armatura.biomodule.view.CustomSettingSwitchLayout
+                        android:id="@+id/displayFPSInfoSwitchView"
+                        customChecked="@{SystemConfig.isNeedShowFPS,default=false}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        CustomSettingLayout:bottom_line_visible="true"
+                        CustomSettingLayout:setting_title="@string/config_display_fps_info" />
+
+                    <com.armatura.biomodule.view.CustomSettingSwitchLayout
+                        android:id="@+id/drawPalmRectWhenIdentify"
+                        customChecked="@{SystemConfig.drawPalmRectWhenIdentify,default=false}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        CustomSettingLayout:setting_hint="@string/draw_palm_rect_when_identify_hint"
+                        CustomSettingLayout:setting_key="draw_palm_when_identify"
+                        CustomSettingLayout:setting_title="@string/draw_palm_rect_when_identify" />
+
+                    <com.armatura.biomodule.view.CustomSeekBarLayout
+                        android:id="@+id/maxPalmIdentifyFailedCount"
+                        default_progress="@{SystemConfig.maxIdentifyFailedCount}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        CustomSettingLayout:max="10"
+                        CustomSettingLayout:min="1"
+                        CustomSettingLayout:setting_key="max_palm_identify_failed_count"
+                        CustomSettingLayout:setting_title="@string/max_identify_failed_count" />
+
+                    <com.armatura.biomodule.view.CustomSeekBarLayout
+                        android:id="@+id/identifyInfoStayTime"
+                        default_progress="@{SystemConfig.identifyInfoStayTime}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        CustomSettingLayout:max="10000"
+                        CustomSettingLayout:min="500"
+                        CustomSettingLayout:setting_key="IdentifyInfoStayTime"
+                        CustomSettingLayout:setting_title="@string/identify_info_stay_time" />
+
+                    <com.armatura.biomodule.view.CustomSeekBarLayout
+                        android:id="@+id/greedLedLightingDurationSeekBar"
+                        default_progress="@{SystemConfig.greedLedLightingDuration}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        CustomSettingLayout:max="10000"
+                        CustomSettingLayout:min="100"
+                        CustomSettingLayout:setting_key="greedLedLightingDuration"
+                        CustomSettingLayout:setting_title="@string/green_indicator_lighting_duration" />
+
+                    <com.armatura.biomodule.view.CustomSeekBarLayout
+                        android:id="@+id/redLedLightingDurationSeekBar"
+                        default_progress="@{SystemConfig.redLedLightingDuration}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        CustomSettingLayout:max="10000"
+                        CustomSettingLayout:min="100"
+                        CustomSettingLayout:setting_key="redLedLightingDuration"
+                        CustomSettingLayout:setting_title="@string/red_indicator_lighting_duration" />
+
+                    <com.armatura.biomodule.view.CustomSettingSwitchLayout
+                        android:id="@+id/test_mode"
+                        customChecked="@{SystemConfig.isTestMode,default=false}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        CustomSettingLayout:setting_hint="@string/tips_test_mode"
+                        CustomSettingLayout:setting_title="@string/test_mode" />
+
+                    <TextView
+                        android:id="@+id/rv_face_config_parameter"
+                        style="@style/SubNameStyle_Port"
+                        android:layout_width="match_parent"
+                        android:layout_height="34dp"
+                        android:text="@string/title_motion_detect"
+                        android:visibility="gone" />
+
+                    <com.armatura.biomodule.view.CustomSettingSwitchLayout
+                        android:id="@+id/motionDetectFunOnSwitch"
+                        customChecked="@{MotionDetectConfig.motionDetectFunOn,default=false}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        CustomSettingLayout:setting_hint=""
+                        CustomSettingLayout:setting_key="motionDetectFunOn"
+                        CustomSettingLayout:setting_title="@string/motion_detect_enable" />
+
+                    <com.armatura.biomodule.view.CustomSeekBarLayout
+                        android:id="@+id/brightnessThrSetView"
+                        default_progress="@{MotionDetectConfig.brightnessThreshold}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        CustomSettingLayout:max="1000"
+                        CustomSettingLayout:min="0"
+                        CustomSettingLayout:setting_title="@string/brightness_threshold" />
+
+                    <com.armatura.biomodule.view.CustomSeekBarLayout
+                        android:id="@+id/idleTimeOutThrSetView"
+                        default_progress="@{MotionDetectConfig.idleTimeOutMS}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        CustomSettingLayout:max="100000"
+                        CustomSettingLayout:min="0"
+                        CustomSettingLayout:setting_title="@string/idle_time_out" />
+
+
+                    <com.armatura.biomodule.view.CustomSeekBarLayout
+                        android:id="@+id/sensitivityThresholdSetView"
+                        default_progress="@{MotionDetectConfig.sensitivityThreshold}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        CustomSettingLayout:bottom_line_visible="false"
+                        CustomSettingLayout:max="1000"
+                        CustomSettingLayout:min="0"
+                        CustomSettingLayout:setting_title="@string/motion_sensitivity" />
+
+                    <TextView
+                        style="@style/SubNameStyle_Port"
+                        android:layout_width="match_parent"
+                        android:layout_height="34dp"
+                        android:text="@string/sync_time" />
+
+                    <com.armatura.biomodule.view.CustomSettingLayout
+                        android:id="@+id/syncTimeView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        CustomSettingLayout:ic_edit_visible="false"
+                        CustomSettingLayout:setting_hint="@string/sync_time_tips"
+                        CustomSettingLayout:setting_title="@string/sysc_time" />
+
+                    <TextView
+                        style="@style/SubNameStyle_Port"
+                        android:layout_width="match_parent"
+                        android:layout_height="34dp"
+                        android:text="@string/system_upgrade_config" />
+
+
+                    <com.armatura.biomodule.view.CustomSettingLayout
+                        android:id="@+id/firmwareUpdateView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        CustomSettingLayout:ic_edit_visible="false"
+                        CustomSettingLayout:setting_hint="@string/camcfg_firmware_upgrade_tip"
+                        CustomSettingLayout:setting_key="deviceLocation"
+                        CustomSettingLayout:setting_title="@string/camcfg_firmware_upgrade" />
+
+                    <com.armatura.biomodule.view.CustomSettingLayout
+                        android:id="@+id/systemUpdateView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        CustomSettingLayout:ic_edit_visible="false"
+                        CustomSettingLayout:setting_hint="@string/upgrade_img_hint"
+                        CustomSettingLayout:setting_key="deviceLocation"
+                        CustomSettingLayout:setting_title="@string/camcfg_system_upgrade" />
+
+                    <com.armatura.biomodule.view.CustomSettingLayout
+                        android:id="@+id/restoreFactoryView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        CustomSettingLayout:ic_edit_visible="false"
+                        CustomSettingLayout:setting_hint="@string/module_restore_factory"
+                        CustomSettingLayout:setting_title="@string/restore_factory" />
+
+                    <TextView
+                        style="@style/SubNameStyle_Port"
+                        android:layout_width="match_parent"
+                        android:layout_height="34dp"
+                        android:text="@string/log_view" />
+
+                    <com.armatura.biomodule.view.CustomSettingLayout
+                        android:id="@+id/btn_connect_history_log"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        CustomSettingLayout:ic_edit_visible="false"
+                        CustomSettingLayout:setting_hint="@string/log_view_hint"
+                        CustomSettingLayout:setting_title="@string/log_connect_history" />
+
+                    <com.armatura.biomodule.view.CustomSettingLayout
+                        android:id="@+id/btn_recuse_log"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        CustomSettingLayout:ic_edit_visible="false"
+                        CustomSettingLayout:setting_hint="@string/log_view_hint"
+                        CustomSettingLayout:setting_title="@string/log_recuse" />
+
+                    <com.armatura.biomodule.view.CustomSettingLayout
+                        android:id="@+id/btn_view_watch_log"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        CustomSettingLayout:ic_edit_visible="false"
+                        CustomSettingLayout:setting_hint="@string/log_view_hint"
+                        CustomSettingLayout:setting_title="@string/log_watch_dog" />
+
+                    <com.armatura.biomodule.view.CustomSettingLayout
+                        android:id="@+id/btn_view_module_kernel_log"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        CustomSettingLayout:ic_edit_visible="false"
+                        CustomSettingLayout:setting_hint="@string/log_view_hint"
+                        CustomSettingLayout:setting_title="@string/log_kernel" />
+
+                    <com.armatura.biomodule.view.CustomSettingLayout
+                        android:id="@+id/btn_view_module_firmware_log"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        CustomSettingLayout:ic_edit_visible="false"
+                        CustomSettingLayout:setting_hint="@string/log_view_hint"
+                        CustomSettingLayout:setting_title="@string/log_firmware" />
+                </LinearLayout>
+
+            </ScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+</layout>

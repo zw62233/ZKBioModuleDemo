@@ -1,0 +1,108 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:CustomSettingLayout="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="VLPalmSetting"
+            type="com.armatura.biomodule.pojo.setting.VLPalmSetting" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/SubNameStyle_Port"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:text="@string/palm_recognize_title" />
+
+        <com.armatura.biomodule.view.CustomSettingSwitchLayout
+            android:id="@+id/palmFunOnSetView"
+            customChecked="@{VLPalmSetting.palmFunOn}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            CustomSettingLayout:setting_hint=""
+            CustomSettingLayout:setting_key="palmFunOn"
+            CustomSettingLayout:setting_title="@string/palm_fun_on_switch" />
+
+        <!--hid 2.0-->
+        <com.armatura.biomodule.view.CustomSeekBarLayout
+            android:id="@+id/palmIdentifyIntervalSetView"
+            default_progress="@{VLPalmSetting.palmIdentifyInterval}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            CustomSettingLayout:max="1000"
+            CustomSettingLayout:min="0"
+            CustomSettingLayout:setting_key="palmIdentifyInterval"
+            CustomSettingLayout:setting_title="@string/palm_identify_interval" />
+
+        <com.armatura.biomodule.view.CustomSeekBarLayout
+            android:id="@+id/palmIdentifyThresholdSetView"
+            default_progress="@{VLPalmSetting.palmIdentifyThreshold}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            CustomSettingLayout:max="1000"
+            CustomSettingLayout:min="0"
+            CustomSettingLayout:setting_title="@string/palm_recognize_threshold" />
+
+        <com.armatura.biomodule.view.CustomSeekBarLayout
+            android:id="@+id/palmImageQualityThrSetView"
+            default_progress="@{VLPalmSetting.imageQualityThreshold}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            CustomSettingLayout:max="100"
+            CustomSettingLayout:min="0"
+            CustomSettingLayout:setting_title="@string/palm_image_quality" />
+
+        <!--hid 2.0-->
+        <com.armatura.biomodule.view.CustomSettingSwitchLayout
+            android:id="@+id/palmAESetView"
+            customChecked="@{VLPalmSetting.palmAE}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            CustomSettingLayout:setting_hint=""
+            CustomSettingLayout:setting_key="palmAE"
+            CustomSettingLayout:setting_title="@string/palm_ae" />
+
+        <!--hid 2.0-->
+        <com.armatura.biomodule.view.CustomSettingSwitchLayout
+            android:id="@+id/palmLivenessSwitchView"
+            customChecked="@{VLPalmSetting.palmLiveness}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            CustomSettingLayout:setting_hint=""
+            CustomSettingLayout:setting_key="palmLiveness"
+            CustomSettingLayout:setting_title="@string/palm_liveness" />
+
+        <!--hid 2.0-->
+        <com.armatura.biomodule.view.CustomSeekBarLayout
+            android:id="@+id/palmLivenessThresholdSetView"
+            default_progress="@{VLPalmSetting.palmLivenessThreshold}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            CustomSettingLayout:max="100"
+            CustomSettingLayout:min="0"
+            CustomSettingLayout:setting_key="palmLivenessThreshold"
+            CustomSettingLayout:setting_title="@string/palm_liveness_threshold" />
+
+        <!--hid 2.0-->
+        <com.armatura.biomodule.view.CustomSeekBarLayout
+            android:id="@+id/palmMinSizeSetView"
+            default_progress="@{VLPalmSetting.palmMinSize}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            CustomSettingLayout:max="500"
+            CustomSettingLayout:min="40"
+            CustomSettingLayout:setting_title="@string/min_palm_size" />
+
+        <com.armatura.biomodule.view.CustomSettingSpinnerLayout
+            android:id="@+id/palmTemplateModeSpinner"
+            set_palm_template_mode="@{VLPalmSetting.palmTemplateMode}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            CustomSettingLayout:setting_spinner_entries="@array/palm_template_mode"
+            CustomSettingLayout:setting_title="@string/palm_template_mode" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

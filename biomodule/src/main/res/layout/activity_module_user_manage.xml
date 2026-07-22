@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:CustomSettingLayout="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/tab3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            CustomSettingLayout:layout_constraintBottom_toBottomOf="parent"
+            CustomSettingLayout:layout_constraintEnd_toEndOf="parent"
+            CustomSettingLayout:layout_constraintStart_toStartOf="parent"
+            CustomSettingLayout:layout_constraintTop_toTopOf="parent">
+
+            <com.armatura.biomodule.view.ToolBar
+                android:id="@+id/top_tool_bar"
+                style="@style/tool_bar_with_back_style"
+                CustomSettingLayout:toolbar_title="@string/tool_panel_module_users" />
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/sv_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:queryHint="@string/search_user" />
+
+            <com.armatura.biomodule.view.PullLoadMoreRecyclerView
+                android:id="@+id/register_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical" />
+
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_add_new_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            CustomSettingLayout:layout_constraintBottom_toBottomOf="parent"
+            CustomSettingLayout:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_add_user"
+            android:contentDescription="@string/add_new_user" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_batch_add_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            CustomSettingLayout:layout_constraintBottom_toBottomOf="parent"
+            CustomSettingLayout:layout_constraintEnd_toStartOf="@id/fab_add_new_user"
+            app:srcCompat="@drawable/baseline_group_add_24"
+            tools:ignore="MissingConstraints"
+            android:contentDescription="@string/add_new_user" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

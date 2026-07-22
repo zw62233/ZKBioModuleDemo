@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line_ver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <com.armatura.biomodule.view.ToolBar
+            android:id="@+id/my_tool_bar"
+            style="@style/tool_bar_with_back_style"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:left_button_visible="true"
+            app:right_button_visible="true" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/user_avatar_iv"
+            android:layout_width="152dp"
+            android:layout_height="152dp"
+            android:layout_centerInParent="true"
+            app:strokeColor="@null"
+            android:background="@color/color_avatar_bg"
+            android:src="@drawable/default_avatar"
+            app:layout_constraintBottom_toTopOf="@+id/avatar_recycler_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/my_tool_bar"
+            app:shapeAppearance="@style/round_style" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/avatar_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="16dp"
+            android:layout_weight="1"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guide_line_ver"
+            app:spanCount="3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
