@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="cancel_operation">Cancel</string>
+	<string name="confirm_operation">Confirm</string>
+	<string name="file_sending">Send files</string>
+</resources>

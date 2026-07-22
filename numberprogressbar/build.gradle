@@ -1,0 +1,13 @@
+apply plugin: 'com.android.library'
+apply from: '../Sign.gradle'
+
+android {
+    compileSdkVersion = 34
+    namespace 'com.daimajia.numberprogressbar'
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 34
+        versionCode 1
+        versionName "1.0"
+    }
+}

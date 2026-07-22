@@ -1,0 +1,37 @@
+com.daimajia.numberprogressbar
+attr in_circle_color
+attr numberProgressBarStyle
+attr progress_current
+attr progress_max
+attr progress_reached_bar_height
+attr progress_reached_color
+attr progress_text_color
+attr progress_text_offset
+attr progress_text_size
+attr progress_text_visibility
+attr progress_unreached_bar_height
+attr progress_unreached_color
+drawable bg_radius
+drawable btn_left_bg
+drawable btn_right_bg
+id dialog_progress_title
+id invisible
+id number_progress_bar
+id progress_dialog_cancel
+id progress_dialog_confirm
+id visible
+layout dialog_progress
+string cancel_operation
+string confirm_operation
+string file_sending
+style NumberProgressBar_Beauty_Red
+style NumberProgressBar_Default
+style NumberProgressBar_Funny_Orange
+style NumberProgressBar_Grace_Yellow
+style NumberProgressBar_Passing_Green
+style NumberProgressBar_Relax_Blue
+style NumberProgressBar_Twinkle_Night
+style NumberProgressBar_Warning_Red
+styleable CircleProgressbar in_circle_color
+styleable NumberProgressBar progress_current progress_max progress_reached_bar_height progress_reached_color progress_text_color progress_text_offset progress_text_size progress_text_visibility progress_unreached_bar_height progress_unreached_color
+styleable Themes numberProgressBarStyle
