@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/nav_snap_shot_rgb"
+        android:icon="@drawable/snap_shot"
+        android:title="@string/snap_shot_rgb_title"
+        android:visible="false" />
+    <item
+        android:id="@+id/nav_snap_shot_gray"
+        android:icon="@drawable/snap_shot"
+        android:title="@string/snap_shot_gray_title"
+        android:visible="false" />
+   <!-- <item
+        android:id="@+id/nav_show_register_list"
+        android:icon="@drawable/ic_register"
+        android:title="@string/tool_panel_users" />-->
+
+    <item
+        android:id="@+id/nav_system_setting"
+        android:icon="@drawable/common_setting"
+        android:title="@string/menu_system_setup" />
+
+    <item
+        android:id="@+id/nav_bio_recognize_config"
+        android:icon="@drawable/ic_menu_face_config"
+        android:title="@string/biometeric_parameter_setup" />
+
+      <item
+          android:id="@+id/nav_about_device"
+          android:icon="@drawable/ic_about_device"
+          android:title="@string/tool_panel_about_device" />
+    <item
+        android:id="@+id/nav_exit"
+        android:icon="@drawable/ic_exit"
+        android:title="@string/exit_app" />
+</menu>

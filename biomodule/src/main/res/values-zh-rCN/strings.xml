@@ -1,0 +1,482 @@
+<resources>
+    <string-array name="facematch_mode">
+        <item>连续比对</item>
+        <item>通过FaceID比对</item>
+    </string-array>
+
+    <string-array name="camera_resolution" translatable="false">
+        <item>480x640</item>
+        <item>720x1280</item>
+    </string-array>
+
+    <string-array name="debug_level" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="liveness_mode_array">
+        <item>关闭</item>
+        <item>单目活体</item>
+        <item>双目活体</item>
+    </string-array>
+
+    <string-array name="infrared_picture_format" translatable="false">
+        <item>jpeg</item>
+        <item>gray</item>
+    </string-array>
+
+    <string-array name="face_alg_version" translatable="false">
+        <item>LiveFace5.95</item>
+    </string-array>
+
+    <string-array name="led_control_mode_array">
+        <item>Module自控</item>
+        <item>Host控制</item>
+    </string-array>
+
+    <string-array name="led_breath_type_array">
+        <item>关闭</item>
+        <item>蓝色</item>
+        <item>白色</item>
+        <item>绿色</item>
+    </string-array>
+
+
+    <string-array name="palm_template_mode">
+        <item>掌纹</item>
+        <item>掌静脉</item>
+        <item>全部</item>
+    </string-array>
+
+    <string-array name="video_stream_mode_type_array">
+        <item>关闭所有码流</item>
+        <item>启用可见光码流</item>
+        <item>启用近红外码流</item>
+        <item>启用所有码流</item>
+    </string-array>
+
+    <string-array name="illumination_trigger_mode_type_array">
+        <item>红外距离感应触发</item>
+        <item>检测到手掌触发</item>
+    </string-array>
+
+    <string-array name="rotation_mode_txt">
+        <item>未知</item>
+        <item>水平</item>
+        <item>垂直</item>
+    </string-array>
+    <string name="device_info">设备信息</string>
+    <string name="get_device_info_failed">获取设备信息失败</string>
+    <string name="user_registered">已注册</string>
+    <string name="user_face">面部</string>
+    <string name="user_palm">手掌</string>
+    <string name="user_feature_image">模板照片</string>
+    <string name="user_none">无</string>
+    <string name="search_user">搜索</string>
+    <string name="device_open_hid_action">开启 HID </string>
+    <string name="device_open_hid_success">成功</string>
+    <string name="device_open_hid_failed">失败</string>
+    <string name="device_init">初始化…</string>
+    <string name="device_not_found">设备未找到</string>
+    <string name="cam_status_tip_open_fail">打开设备失败</string>
+    <string name="cam_status_tip_capture_fail">开启视频流失败</string>
+    <string name="cam_status_tip_open_success">相机打开成功</string>
+    <string name="tool_panel_devices">面部模块设备</string>
+    <string name="face_capture_register">面部抓拍注册</string>
+    <string name="tool_panel_users">设备用户管理</string>
+    <string name="tool_panel_camconfig">相机配置</string>
+    <string name="tool_panel_setting">设置</string>
+    <string name="tool_panel_display_setting">显示设置</string>
+    <string name="tool_panel_about_device">关于设备</string>
+    <string name="tip_cant_reg_in_cloud">云端模式无法注册</string>
+    <string name="tip_restart_app">重启APP</string>
+    <string name="tip_restart_app_2">某些设置更改，需要重启模组</string>
+    <string name="txt_cancel">取消</string>
+    <string name="txt_ok">确认</string>
+    <string name="txt_no_i_do_not_want">不了，谢谢</string>
+    <string name="tip_update_face_data">更新面部数据</string>
+    <string name="tip_find_uvc_devices">查找UVC设备</string>
+    <string name="tip_find_uvc_devices_success">查找设备成功</string>
+    <string name="tip_find_uvc_devices_fail">查找设备失败</string>
+    <string name="devdig_tip_click_open_cam">点击打开相机</string>
+    <string name="devdig_tip_pls_choose_your_option">请选择</string>
+    <string name="devdig_tip_close_cam">关闭相机</string>
+    <string name="users_tip_update_data">更新数据中…</string>
+    <string name="users_tip_update_complete">更新完成：</string>
+    <string name="users_tip_delete_all_data">确定删除所有数据么？</string>
+    <string name="users_tip_cannot_delete">更新中无法删除</string>
+    <string name="users_tip_delete_ok">删除成功</string>
+    <string name="users_tip_delete_fail">删除失败</string>
+    <string name="users_tip_deleting">删除中…</string>
+    <string name="camcfg_open_usb">打开USB</string>
+    <string name="camcfg_system_upgrade">系统升级</string>
+    <string name="camcfg_firmware_upgrade">固件升级</string>
+    <string name="camcfg_firmware_upgrade_tip">发送文件或固件升级</string>
+    <string name="camcfg_send_file">发送文件</string>
+    <string name="camcfg_start_heart">开启心跳</string>
+    <string name="camcfg_stop_heart">关闭心跳</string>
+    <string name="camcfg_image_setting">图像设置\n(竖屏相反)</string>
+    <string name="txt_get">获取</string>
+    <string name="txt_set">设置</string>
+    <string name="camcfg_rotation_mode">旋转模式</string>
+    <string name="camcfg_face_mode">面部模式</string>
+    <string name="camcfg_common_setting">通用设置</string>
+    <string name="camcfg_set_reboot">设置并重启</string>
+    <string name="camcfg_faceae_enable">开启FaceAE</string>
+    <string name="camcfg_rec_attr">识别属性计算</string>
+    <string name="camcfg_rgb_liveness">RGB活体</string>
+    <string name="mask_recognize_fun_on_title">口罩识别开关</string>
+    <string name="camcfg_score_interval">质量检测间隔帧(2–7)</string>
+    <string name="camcfg_face_rec_threshold">面部检测阈值</string>
+    <string name="camcfg_threshold_blur">模糊度(0–100)</string>
+    <string name="rang_1_to_100">(0&#8211;100)</string>
+    <string name="rang_1_to_1000">(0&#8211;1000)</string>
+    <string name="rang_1_to_100000">(0&#8211;100000)</string>
+    <string name="rang_2_to_7">(2&#8211;7)</string>
+    <string name="rang_min_to_720">(0&#8211;720)</string>
+    <string name="rang_min_to_1280">(0&#8211;1280)</string>
+    <string name="rang_0_to_max">(0&#8211;max)</string>
+    <string name="rang_0_to_180">(0&#8211;180)</string>
+    <string name="rang_180_to_0">(180&#8211;0)</string>
+    <string name="rang_0_to_1">(0&#8211;1)</string>
+    <string name="camcfg_threshold_front">正脸(0–100)</string>
+    <string name="camcfg_threshold_score">质量(0–100)</string>
+    <string name="camcfg_threshold_height_max">面部最大高度(0~720)</string>
+    <string name="camcfg_threshold_height_min">面部最小高度(0~1280)</string>
+    <string name="camcfg_threshold_width_max">面部最大宽度(0~1280)</string>
+    <string name="camcfg_threshold_width_min">面部最小宽度(0~1280)</string>
+    <string name="camcfg_threshold_pitch_max">Pitch最大值(0~180)</string>
+    <string name="camcfg_threshold_pitch_min">Pitch最小值(-180~0)</string>
+    <string name="camcfg_threshold_roll_max">Roll最大值(0~180)</string>
+    <string name="camcfg_threshold_roll_min">Roll最小值(-180~0)</string>
+    <string name="camcfg_threshold_yaw_max">Yaw最大值(0~180)</string>
+    <string name="camcfg_threshold_yaw_min">Yaw最小值(-180~0)</string>
+    <string name="config_face_rec">面部识别</string>
+    <string name="config_threshold">识别阈值</string>
+    <string name="face_verify_threshold">面部1V1比对阈值</string>
+    <string name="config_match_mode">启用根据FaceId比对模式</string>
+    <string name="config_display_liveness_info">活体信息显示开关</string>
+    <string name="config_display_cpu_temp_info">显示模组CPU温度信息</string>
+    <string name="config_display_fps_info">显示FPS</string>
+    <string name="config_uvc_liveness_tip">显示活体信息以及是否根据活体分数进行面部识别</string>
+    <string name="config_show_faceinfo">在面部框上显示用户信息</string>
+    <string name="config_show_detail_faceinfo">在面部框上显示详细信息</string>
+    <string name="config_show_faceinfo_hint">面部框上显示人员姓名</string>
+    <string name="config_algorithm">算法</string>
+    <string name="config_algorithm_hint">重启后生效</string>
+    <string name="config_camera_parameter">相机参数(下次打开相机生效)</string>
+    <string name="config_resolution">分辨率</string>
+    <string name="config_framerate">帧率</string>
+    <string name="config_device_parameter">设备参数</string>
+    <string name="config_device_uuid">设备UUID</string>
+    <string name="config_device_position">设备位置</string>
+    <string name="config_face_capture">面部抓拍</string>
+    <string name="config_capture_to_file">至文件</string>
+    <string name="config_capture_to_server">抓拍至服务器</string>
+    <string name="config_capture_server_addr">服务器地址</string>
+    <string name="config_orion_cloud">猎鹰云对接</string>
+    <string name="config_cloud_mode">云端模式</string>
+    <string name="config_cloud_app_key">app key</string>
+    <string name="config_cloud_app_secret">app secret</string>
+    <string name="config_cloud_addr">云链接地址</string>
+    <string name="config_cloud_port">云链接端口</string>
+    <string name="config_app_setting">APP设置</string>
+    <string name="config_app_portait_mode">竖屏模式</string>
+    <string name="config_app_debug_window">Debug日志开关</string>
+    <string name="config_app_identification_source">识别信息来源</string>
+    <string name="config_app_sdk_log_level">SDK日志级别</string>
+    <string name="config_app_mjpg_check">MJPG数据校验</string>
+    <string name="config_app_auto_open_hid">自动打开HID</string>
+    <string name="config_app_hw_decode">硬件解码</string>
+    <string name="config_information">其他信息</string>
+    <string name="config_info_camera">相机信息</string>
+    <string name="config_info_app">本机信息</string>
+    <string name="config_tip_restart_app">重启APP生效</string>
+    <string name="config_tip_no_need_http">请不要加http://</string>
+    <string name="reg_face_tip_already_reg">用户%s相似度过高%d(%s)</string>
+    <string name="reg_face_tip_input_name">输入姓名：</string>
+    <string name="reg_face_tip_err_database">面部注册失败：数据库错误</string>
+    <string name="reg_user_pin_already_regist">用户ID%s已注册</string>
+    <string name="reg_face_tip_empty_name">姓名为空</string>
+    <string name="reg_face_tip_empty_pin">用户ID为空</string>
+    <string name="reg_face_tip_cancel_reg">取消注册</string>
+    <string name="reg_face_tip_reg_ok_name">面部注册成功：%s %s</string>
+    <string name="reg_face_send_img_fail">发送图像失败</string>
+    <string name="reg_face_tip_cmd_err">面部检测命令执行失败</string>
+    <string name="reg_face_tip_no_face">未检测面部</string>
+    <string name="reg_face_tip_small_face">"面部尺寸太小 "</string>
+    <string name="reg_face_tip_poor_quality">"面部质量太差 "</string>
+    <string name="reg_face_tip_feature_len_err">特征长度错误</string>
+    <string name="reg_face_tip_cutout_err">面部抠图异常</string>
+    <string name="reg_face_tip_err_database2">数据库操作失败</string>
+    <string name="reg_face_tip_face_detect_fail">面部检测调用失败</string>
+    <string name="camcfg_upgrade_prepare_tip">升级前需要发送准备指令，是否继续？</string>
+    <string name="camcfg_upgrade_reboot_tip">升级前需要先重启UVC，是否继续？</string>
+    <string name="camcfg_rotation_mode_change_tip">需要重启UVC生效，是否重启？</string>
+    <string name="reg_face_tip_pose_too_big">面部角度太大</string>
+    <string name="tip_algo_ver_error">算法版本与相机版本不对应，请在设置中更改！</string>
+    <string name="nav_title_face_manage">生物模板管理</string>
+    <string name="display_display_setting_title">显示设置</string>
+    <string name="system_setting_title">系统设置</string>
+    <string name="bio_recognize_setting_title">生物识别参数设置</string>
+    <string name="display_setting_image_mirror">镜像</string>
+    <string name="display_setting_image_flip">翻转</string>
+    <string name="display_setting_mirror_flip_hint">竖屏相反</string>
+    <string name="hint_pls_input_threshold">请输入阈值</string>
+    <string name="enable_usb_heart">开启USB心跳</string>
+    <string name="tip_pls_input_your_name">姓名</string>
+    <string name="setting_title_led_ctrl">IRLed控制</string>
+    <string name="setting_title_led_ctrl_tip">控制IRLed开或关</string>
+    <string name="tips_uvc_cmd_execute">UVC命令执行</string>
+    <string name="tips_send">发送</string>
+    <string name="tips_clear">清空</string>
+    <string name="palm_capture_register">手掌抓拍注册</string>
+    <string name="snap_shot_rgb_title">RGB图像抓拍</string>
+    <string name="snap_shot_gray_title">NIR图像抓拍</string>
+    <string name="title_motion_detect">移动探测设置</string>
+    <string name="brightness_threshold">亮度阈值</string>
+    <string name="idle_time_out">空闲超时时长</string>
+    <string name="motion_detect_enable">移动探测使能</string>
+    <string name="motion_sensitivity">移动探测敏感度</string>
+    <string name="system_upgrade_config">系统升级配置</string>
+    <string name="app_config">应用设置</string>
+    <string name="palm_image_quality">手掌图像质量阈值</string>
+    <string name="palm_fun_on_switch">手掌识别功能开关</string>
+    <string name="palm_recognize_title">手掌识别设置</string>
+    <string name="face_capture_filter_title">面部过滤设置</string>
+    <string name="common_setting_title">通用设置</string>
+    <string name="rgb_liveness_title">可见光活体</string>
+    <string name="nir_liveness_title">近红外活体</string>
+    <string name="face_attr_recognize_interval">面部属性间隔</string>
+    <string name="liveness_threshold">活体阈值</string>
+    <string name="single_lens_liveness_threshold">单目活体阈值</string>
+    <string name="dual_lens_liveness_threshold">双目活体阈值</string>
+    <string name="recognize_interval">识别间隔(毫秒)</string>
+    <string name="attribute_recognize">属性分析开关</string>
+    <string name="attribute_track">属性跟踪开关</string>
+    <string name="count_algorithm">算法耗时计算开关</string>
+    <string name="drwa_face_rect">绘制面部框开关</string>
+    <string name="palm_info_register">手掌信息录入</string>
+    <string name="input_your_name">请输入姓名</string>
+    <string name="snap_shot_failed">截图失败</string>
+    <string name="captureing">取像中…</string>
+    <string name="register_complete">注册完成,id=%d</string>
+    <string name="register_timeout">register timeout</string>
+    <string name="palm_similar_too_high">手掌与%s相似度太高,请重试</string>
+    <string name="menu_hint_device_manage">设备管理</string>
+    <string name="menu_system_setup">系统设置</string>
+    <string name="biometeric_parameter_setup">生物识别参数设置</string>
+    <string name="palm_recognize_width">手掌算法识别宽度设置</string>
+    <string name="pam_recognize_height">手掌算法识别高度设置</string>
+    <string name="palm_recognize_template_quality_thr">手掌识别模板质量阈值</string>
+    <string name="debug_level">模组日志级别设置</string>
+    <string name="palm_recognize_threshold">手掌识别阈值</string>
+    <string name="merge_tamplate_failed">MergeTemplate Failed,%d</string>
+
+    <string name="cancel_operation">取消</string>
+    <string name="change_liveness_need_reboot">变更活体功能需要重启模组</string>
+    <string name="hint_pls_input_user_id">用户ID</string>
+
+    <string name="invalid_data">无效数据</string>
+    <string name="exit_app">退出</string>
+    <string name="register_failed">注册失败</string>
+    <string name="send_cmd">发送</string>
+    <string name="clear_log">清空</string>
+    <string name="remote_user_manage">模组用户管理</string>
+    <string name="match_inside_switch">内部比对开关</string>
+    <string name="match_inside">内部比对</string>
+    <string name="clear_module_user">清空模组用户</string>
+    <string name="sync_local_to_module">上传本地人员</string>
+    <string name="get_all_user_from_module">获取模组用户</string>
+    <string name="statistic_module_user">统计模组用户</string>
+    <string name="user_detail">用户详情</string>
+    <string name="face">面部注册</string>
+    <string name="palm">手掌注册</string>
+    <string name="enroll_title">%s Enroll</string>
+    <string name="un_know">未知</string>
+    <string name="next_step">下一步</string>
+    <string name="base_info_collect">基本信息录入</string>
+    <string name="info_collect">信息录入</string>
+    <string name="add_new_user">添加新用户</string>
+    <string name="user_id">用户ID:</string>
+    <string name="user_name">姓  名:</string>
+    <string name="hid_no_result">Hid无结果</string>
+    <string name="hid_sned_failed">HID命令发送失败</string>
+    <string name="detect_no_face">没有检测到面部</string>
+    <string name="face_too_small">面部太小,[%.1f,%.1f]</string>
+    <string name="face_quality_too_bad">面部质量太差,[%.1f,%.1f]</string>
+    <string name="face_blur_too_high">面部模糊度太高,[%.1f,%.1f]</string>
+    <string name="face_yaw_pose_too_big">面部yaw角度太大,[%.1f,%.1f]</string>
+    <string name="face_pitch_pose_too_big">面部pitch角度太大,[%.1f,%.1f]</string>
+    <string name="face_roll_pose_too_big">面部roll角度太大,[%.1f,%.1f]</string>
+    <string name="face_already_registered">面部已被%s注册,[%.1f,%.1f]</string>
+    <string name="json_analyse_failed">数据格式异常</string>
+    <string name="palm_already_register">手掌已被%s注册,[%.1f,%.1f]</string>
+    <string name="palm_already_in_module">手掌已在模组注册!</string>
+    <string name="face_already_in_module">面部已在模组注册!</string>
+    <string name="palm_do_not_move">请保持手掌静止</string>
+    <string name="face_do_not_move">请保持面部静止</string>
+    <string name="set_your_avatar">设置头像</string>
+    <string name="take_photo">拍照</string>
+    <string name="remake_photo">重拍</string>
+    <string name="confirm">确认</string>
+    <string name="choose_register_way">注册方式</string>
+    <string name="local_image">通过照片注册</string>
+    <string name="camera">通过摄像头注册</string>
+    <string name="module_inside_register">通过摄像头注册(无预览)</string>
+    <string name="snap_shot_register">通过SnapShot采集照片注册</string>
+    <string name="pick_photo">选取照片</string>
+    <string name="pls_choose_photo_first">请先选择照片</string>
+    <string name="registering">注册中</string>
+    <string name="click_register_from_internal">点击从模组内部注册</string>
+    <string name="snapshot">SnapShot</string>
+    <string name="register_in_module_with_photo">通过照片注册面部</string>
+    <string name="register_face_in_module_by_cacheId">通过摄像头注册面部</string>
+    <string name="register_palm_in_module_by_cacheId">通过摄像头注册手掌</string>
+    <string name="register_success">注册成功</string>
+    <string name="add_face">AddFace</string>
+    <string name="add_palm">AddPalm</string>
+    <string name="not_detect_palm">未检测到手掌,请将手掌对准摄像头</string>
+    <string name="merge_palm_failed">手掌合并失败</string>
+    <string name="pls_confirm">请确认</string>
+    <string name="quality_bad_continue_register">面部质量可能不佳，是否继续注册？</string>
+    <string name="keep_your_posture">请保持距离，稍微调整角度</string>
+    <string name="cache_id_ready_click_confirm">CacheId准备完成，请点击确认进行添加</string>
+    <string name="no_palm_detect_click_add_continue">未检测到手掌，请将手掌对准摄像头并点击Add按钮</string>
+    <string name="no_face_detect_move_face_and_click_add">未检测到面部，请将面部对准摄像头并点击Add按钮</string>
+    <string name="register_palm_in_module_with_photo">通过照片注册手掌</string>
+    <string name="register_enable_camera_preview">登记时打开摄像头预览</string>
+    <string name="infrared_image_format">近红外照片返回格式</string>
+    <string name="bitmap_decode_failed">图像解析失败</string>
+    <string name="return_image_when_register">登记时返回图片</string>
+    <string name="return_template_when_register">登记时返回生物模板</string>
+    <string name="return_info_when_register">登记时返回面部/手掌信息</string>
+    <string name="enable_disable_match_by_face_id">开启或者关闭根据FaceId识别</string>
+    <string name="is_enable_attendance_log_save_in_module">是否开启保存考勤记录</string>
+    <string name="save_attendance_log">保存考勤记录</string>
+    <string name="is_enable_strange_att_log">是否开启保存陌生人考勤记录</string>
+    <string name="save_strange_att_Log">保存陌生人考勤记录</string>
+    <string name="module_restore_factory">模组恢复出厂设置</string>
+    <string name="restore_factory">恢复出厂设置</string>
+    <string name="module_reset_factory">模组恢复出厂设置?</string>
+    <string name="sync_time">时间同步</string>
+    <string name="confirm_sync_time_title">是否同步时间到模组?</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="sync_time_message">考勤功能在同步时间后才可以正常工作</string>
+    <string name="sync_success">同步成功</string>
+    <string name="sync_failed">同步失败</string>
+    <string name="tips_test_mode">测试模式下会保存属性记录和照片</string>
+    <string name="test_mode">测试模式</string>
+    <string name="sync_time_tips">点击同步当前时间到模组</string>
+    <string name="sysc_time">时间同步</string>
+    <string name="identify_success">识别成功</string>
+    <string name="about">关于</string>
+    <string name="is_enable_store_enroll_photo">是否在模组中保存登记照片</string>
+    <string name="save_enroll_photo">模组中保存登记照片</string>
+    <string name="settings">设置</string>
+    <string name="note">注意</string>
+    <string name="pause">暂停</string>
+    <string name="face_recognition">面部识别</string>
+    <string name="palm_recognition">手掌识别</string>
+    <string name="stop">停止</string>
+    <string name="identify_once">单次识别</string>
+    <string name="identify_const">连续识别</string>
+    <string name="prepare_to_enroll_face">请摘掉口罩、太阳镜或者其他面部遮挡物</string>
+    <string name="prepare_to_enroll_palm">请将手掌移动至图像中间。若无反应请向前或者向后移动</string>
+    <string name="palm_identify_interval">手掌识别间隔(s)</string>
+    <string name="palm_ae">启用 PalmAE</string>
+    <string name="palm_liveness">开启手掌活体</string>
+    <string name="palm_liveness_threshold">手掌活体阈值</string>
+    <string name="min_palm_size">最小手掌大小</string>
+    <string name="attend_interval">考勤间隔</string>
+    <string name="tool_panel_module_users">模组用户管理</string>
+    <string name="loading_user">正在加载用户信息</string>
+    <string name="tips_please_choose_another_image">请选择宽高比为9:16的图片,推荐720x1280</string>
+    <string name="tips_add_user_success">添加用户 %s 成功</string>
+    <string name="tips_add_user_failed">添加用户失败</string>
+    <string name="tips_user_exist">用户已存在</string>
+    <string name="tips_delete_user">确定要删除这个用户吗？</string>
+    <string name="prepare_enroll_face">%d秒后开始,请调整面部至登记区域</string>
+    <string name="prepare_enroll_palm">%d秒后开始,请调整手掌至登记区域</string>
+    <string name="host">本地识别阈值</string>
+    <string name="host_face_identify_threshold">本地默认面部识别阈值</string>
+    <string name="host_palm_recognize_threshold">本地可见手掌识别阈值</string>
+    <string name="host_face_registration_quality">本地面部登记质量判断阈值</string>
+    <string name="display_face_pose_info">显示面部角度信息</string>
+    <string name="display_age_attribute">显示年龄属性</string>
+    <string name="display_gender_attribute">显示性别属性</string>
+    <string name="display_expression_attribute">显示表情属性</string>
+    <string name="display_mustache_attribute">显示胡子属性</string>
+    <string name="display_glasses_attribute">显示眼镜属性</string>
+    <string name="display_hat_attribute">显示帽子属性</string>
+    <string name="display_mask_attribute">显示口罩属性</string>
+    <string name="enroll_need_same_palm">登记过程中请勿更换其他手掌</string>
+    <string name="enroll_need_same_face">登记过程中请勿更换其它面部</string>
+    <string name="max_face_enable">仅识别最大面部</string>
+    <string name="max_face_enable_tips">启用后，只识别最大面部。停用后，则同时识别多张面部。</string>
+    <string name="push_photo_enable">开启特征值图像推送</string>
+    <string name="push_photo_enable_tips">开启后,特征值图像将会和特征值一起推送</string>
+    <string name="upgrade_img_hint">确认升级后,请在此页面停留并等待文件选择页面弹出</string>
+    <string name="tips_pls_move_face_to_enroll_area">请将面部移动至绿色登记区域内</string>
+    <string name="tips_pls_move_palm_to_enroll_area">请将手掌移动至绿色登记区域内</string>
+    <string name="version_not_match_tips">检测到模组系统版本(%1$s)过低,请联系技术支持升级到最新系统，否则部分功能将会存在兼容问题。</string>
+    <string name="switch_video_stream_mode_warning">当前VideoStreamMode切换后可能无法正常显示，请确认是否继续切换？</string>
+    <string name="title_warning">注意</string>
+    <string name="face_detect_height_range">面部检测高度范围</string>
+    <string name="face_detect_width_range">面部检测宽度范围</string>
+    <string name="face_pitch_range">面部pitch范围</string>
+    <string name="face_roll_range">面部roll范围</string>
+    <string name="face_yaw_range">面部yaw范围</string>
+    <string name="led_control_mode_title">指示灯控制模式</string>
+    <string name="led_breath_type_title">呼吸灯类型</string>
+    <string name="video_stream_mode_title">视频流选择</string>
+    <string name="illumination_trigger_mode_title">补光灯触发模式</string>
+    <string name="draw_palm_rect_when_identify">只在识别时绘制手掌框</string>
+    <string name="max_identify_failed_count">最大识别失败次数</string>
+    <string name="identify_info_stay_time">识别信息停留时长(ms)</string>
+    <string name="green_indicator_lighting_duration">绿色指示灯点亮时长(ms)</string>
+    <string name="red_indicator_lighting_duration">红色指示灯点亮时长(ms)</string>
+    <string name="tips_batch_enroll_palm_from_file">从文件导入手掌</string>
+    <string name="tips_batch_enroll_palm_by_photo">通过照片导入手掌</string>
+    <string name="tips_batch_import_face_from_db">从文件导入人脸</string>
+    <string name="face_suspected_fake_attack">疑似面部假体攻击,[%.1f,%.1f]</string>
+    <string name="palm_suspected_fake_attack">疑似手掌假体攻击,[%.1f,%.1f]</string>
+    <string name="hid_comm_exception">HID通讯异常,请检查连接或设备USB通讯异常</string>
+    <string name="draw_palm_rect_when_identify_hint">开启时，只有识别手掌才会绘制框。关闭后，只要检测到手掌就会绘制标识框</string>
+    <string name="batch_adding_palms">正在批量登记手掌</string>
+    <string name="power_save_mode_hint">开启后，若10S内没有检测到有效信息，则进入待机模式</string>
+    <string name="power_save_mode">节能模式</string>
+    <string name="card">卡</string>
+    <string name="please_swipe_card">请刷卡</string>
+    <string name="detect_too_much_face">检测到多张面部</string>
+    <string name="needs_two_feature">请先执行步骤1提取待比对模板</string>
+    <string name="hid_failed">HID 命令失败,error = %d</string>
+    <string name="do_as_tips">请按提示进行操作</string>
+    <string name="step1_extract_the_face_template1">Step1.\n提取待比对人脸特征值</string>
+    <string name="press_to_extract">点击进行提取</string>
+    <string name="step2_verify_the_face_template">Step2.\n比对人脸特征值</string>
+    <string name="press_to_verify">点击进行比对</string>
+    <string name="step_1_needs_fisrt">请先执行步骤1</string>
+    <string name="step_2_needs_execute">请点击比对按钮进行验证</string>
+    <string name="clear">clear</string>
+    <string name="user_pin">user pin</string>
+    <string name="face_settings_title">面部算法设置</string>
+    <string name="liveness_mode">活体检测模式</string>
+    <string name="palm_template_mode">推送手掌模板类型</string>
+    <string name="unsupported_option">模组不支持下列选项：%s</string>
+    <string name="log_view">日志查看</string>
+    <string name="log_connect_history">历史连接记录</string>
+    <string name="log_recuse">自修复记录</string>
+    <string name="log_watch_dog">看门狗记录</string>
+    <string name="log_kernel">内核日志</string>
+    <string name="log_firmware">固件日志</string>
+    <string name="log_view_hint">点击查看日志</string>
+    <string name="drawer_open">draw open</string>
+    <string name="drawer_close">draw close</string>
+    <string name="tips_batch_import_face_from_face_mx_csv">通过CSV文件导入FACE MX的数据库</string>
+    <string name="detection_distance">探测距离</string>
+</resources>

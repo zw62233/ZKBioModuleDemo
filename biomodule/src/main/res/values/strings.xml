@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">AMT MultiBio Demo</string>
+    <string name="title_activity_face_register" translatable="false">FaceRegisterActivity</string>
+    <string name="register_face_from_camera" translatable="false">Register face from camera</string>
+    <string name="register_face_from_picture" translatable="false">Register face from picture</string>
+    <string name="delete_all_data" translatable="false">Delete all snapshots</string>
+    <string name="app_version" translatable="false">1.0.7</string>
+
+    <string-array name="facematch_mode">
+        <item>Cont. Match</item>
+        <item>Single Match</item>
+    </string-array>
+
+
+    <string-array name="camera_resolution">
+        <item>480x640</item>
+        <item>720x1280</item>
+    </string-array>
+
+    <string-array name="debug_level">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="infrared_picture_format">
+        <item>jpeg</item>
+        <item>gray</item>
+    </string-array>
+
+
+    <string-array name="sensor_frame_rate_array" translatable="false">
+        <item>15</item>
+        <item>25</item>
+        <item>30</item>
+    </string-array>
+
+    <string-array name="liveness_mode_array">
+        <item>Disable</item>
+        <item>SingleLensLiveness</item>
+        <item>DualLensLiveness</item>
+    </string-array>
+
+    <string-array name="palm_template_mode">
+        <item>Palm Print</item>
+        <item>Palm Vein</item>
+        <item>Both</item>
+    </string-array>
+
+    <string-array name="led_control_mode_array">
+        <item>Controlled by Module</item>
+        <item>Controlled by Host</item>
+    </string-array>
+
+    <string-array name="led_breath_type_array">
+        <item>Disable</item>
+        <item>Blue</item>
+        <item>White</item>
+        <item>Green</item>
+    </string-array>
+
+
+    <string-array name="video_stream_mode_type_array">
+        <item>Disable</item>
+        <item>Visible light video</item>
+        <item>Infrared light video</item>
+        <item>Both</item>
+    </string-array>
+
+
+    <string-array name="illumination_trigger_mode_type_array">
+        <item>ModeProximityTrigger</item>
+        <item>ModePalmTrigger</item>
+    </string-array>
+
+    <string-array name="identification_source_array" translatable="false">
+        <item>Host</item>
+        <item>MultiBioModule</item>
+    </string-array>
+
+    <string-array name="sdk_log_level_array" translatable="false">
+        <item>VERBOSE</item>
+        <item>DEBUG</item>
+        <item>INFO</item>
+        <item>WARN</item>
+        <item>ERROR</item>
+        <item>ASSERT</item>
+    </string-array>
+
+    <string-array name="face_alg_version">
+        <item>AMTLiveFace5.95</item>
+    </string-array>
+
+    <string-array name="rotation_mode_txt">
+        <item>Invalid position</item>
+        <item>Horizontal position</item>
+        <item>Vertical position</item>
+    </string-array>
+
+    <string name="text_placeholder" translatable="false">placeholder</string>
+    <string name="device_info">Device Info</string>
+    <string name="get_device_info_failed">Failed to read device info</string>
+
+    <string name="user_registered">Registered</string>
+    <string name="user_face">Face</string>
+    <string name="user_palm">Palm</string>
+    <string name="user_feature_image">Feature Image</string>
+    <string name="user_none">None</string>
+    <string name="search_user">Search</string>
+    <string name="device_open_hid_action">"Open HID "</string>
+    <string name="device_open_hid_success">Success!</string>
+    <string name="device_open_hid_failed">Error!</string>
+    <string name="device_init">Initializing…</string>
+    <string name="device_not_found">Device not found</string>
+    <string name="cam_status_tip_open_fail">Failed to open the device</string>
+    <string name="cam_status_tip_capture_fail">Failed to open video steam</string>
+    <string name="cam_status_tip_open_success">Camera opened successfully</string>
+    <string name="tool_panel_devices">UVC Device</string>
+    <string name="face_capture_register">Snapshot Registration</string>
+    <string name="tool_panel_users">Users</string>
+    <string name="tool_panel_camconfig">Camera Configuration</string>
+    <string name="tool_panel_setting">Settings</string>
+    <string name="tool_panel_display_setting">Display Settings</string>
+    <string name="tool_panel_about_device">About</string>
+    <string name="tip_cant_reg_in_cloud">Unable to register in cloud mode</string>
+    <string name="tip_restart_app">Restart the app</string>
+    <string name="tip_restart_app_2">Setting updated, need to reboot the module</string>
+    <string name="txt_cancel">Cancel</string>
+    <string name="txt_ok">OK</string>
+    <string name="txt_no_i_do_not_want">No,Thanks</string>
+    <string name="tip_update_face_data">Update face snapshot</string>
+    <string name="tip_find_uvc_devices">Find UVC device</string>
+    <string name="tip_find_uvc_devices_success">Device found successfully</string>
+    <string name="tip_find_uvc_devices_fail">Failed to find device</string>
+    <string name="devdig_tip_click_open_cam">Click to open camera</string>
+    <string name="devdig_tip_pls_choose_your_option">Please choose</string>
+    <string name="devdig_tip_close_cam">Turn off the camera</string>
+    <string name="users_tip_update_data">Updating snapshot…</string>
+    <string name="users_tip_update_complete">Update completed:</string>
+    <string name="users_tip_delete_all_data">Are you sure to delete all data?</string>
+    <string name="users_tip_cannot_delete">Cannot be deleted during update</string>
+    <string name="users_tip_delete_ok">Deleted successfully</string>
+    <string name="users_tip_delete_fail">Failed to delete</string>
+    <string name="users_tip_deleting">Deleting…</string>
+    <string name="camcfg_open_usb">Open USB</string>
+    <string name="camcfg_system_upgrade">System upgrade</string>
+    <string name="camcfg_firmware_upgrade">Firmware upgrade</string>
+    <string name="camcfg_firmware_upgrade_tip">Send file for firmware upgrade</string>
+    <string name="camcfg_send_file">Send file</string>
+    <string name="camcfg_start_heart">Start heartbeat</string>
+    <string name="camcfg_stop_heart">Stop heartbeat</string>
+    <string name="camcfg_image_setting">Image settings</string>
+    <string name="txt_get">Get</string>
+    <string name="txt_set">Set</string>
+    <string name="camcfg_rotation_mode">Rotation Mode</string>
+    <string name="camcfg_face_mode">Face Mode</string>
+    <string name="camcfg_common_setting">Common Settings</string>
+    <string name="camcfg_set_reboot">Set and restart</string>
+    <string name="camcfg_faceae_enable">Enable FaceAE</string>
+    <string name="camcfg_rec_attr">Face attribute analysis</string>
+    <string name="camcfg_rgb_liveness">RGB liveness</string>
+    <string name="mask_recognize_fun_on_title">Recognition With Respirator</string>
+    <string name="camcfg_score_interval">Quality inspection interval frames(2–7)</string>
+    <string name="camcfg_face_rec_threshold">Face detection threshold</string>
+    <string name="camcfg_threshold_blur">Blur level(0–100)</string>
+    <string name="sensor_frame_rate" translatable="false">Sensor Frame Rate</string>
+    <string name="led_control_mode_title">Indicator LED Control Mode</string>
+    <string name="led_breath_type_title">LED Breath Type</string>
+    <string name="video_stream_mode_title">Video Encode Mode</string>
+    <string name="illumination_trigger_mode_title">Illumination Trigger Mode</string>
+    <string name="rang_1_to_100">(0–100)</string>
+    <string name="rang_1_to_1000">(0–1000)</string>
+    <string name="rang_1_to_100000">(0–100000)</string>
+    <string name="rang_2_to_7">(2–7)</string>
+    <string name="rang_min_to_720">(min–720)</string>
+    <string name="rang_min_to_1280">(min–1280)</string>
+    <string name="rang_0_to_max">(0–max)</string>
+    <string name="rang_0_to_180">(0–180)</string>
+    <string name="rang_180_to_0">(180–0)</string>
+    <string name="rang_0_to_1">(0–1)</string>
+    <string name="camcfg_threshold_front">Front face(0–100)</string>
+    <string name="camcfg_threshold_score">Quality score(0–100)</string>
+    <string name="camcfg_threshold_height_max">Max height of face(0~720)</string>
+    <string name="camcfg_threshold_height_min">Min height of face(0~1280)</string>
+    <string name="camcfg_threshold_width_max">Max width of face(0~1280)</string>
+    <string name="camcfg_threshold_width_min">Min width of face(0~1280)</string>
+    <string name="camcfg_threshold_pitch_max">Pitch max(0~180)</string>
+    <string name="camcfg_threshold_pitch_min">Pitch min(-180~0)</string>
+    <string name="camcfg_threshold_roll_max">Roll max(0~180)</string>
+    <string name="camcfg_threshold_roll_min">Roll min(-180~0)</string>
+    <string name="camcfg_threshold_yaw_max">Yaw max(0~180)</string>
+    <string name="camcfg_threshold_yaw_min">Yaw min(-180~0)</string>
+    <string name="config_face_rec">Face recognition</string>
+    <string name="config_threshold">Recognition Threshold</string>
+    <string name="face_verify_threshold">Face Verify Threshold</string>
+    <string name="config_match_mode">Face tracking mode</string>
+    <string name="config_display_liveness_info">Display liveness info</string>
+    <string name="config_display_cpu_temp_info">Display CPU Temp</string>
+    <string name="config_display_fps_info">Display FPS</string>
+    <string name="config_uvc_liveness_tip">Display liveness score on which the face recognition is based.</string>
+    <string name="config_show_faceinfo">Display Face Info On Face Rect</string>
+    <string name="config_show_detail_faceinfo">Display Face Info Detail On Face Rect</string>
+    <string name="config_algorithm">Algorithm</string>
+    <string name="config_algorithm_hint">Take effective after restart</string>
+    <string name="config_camera_parameter">Camera parameter(effective on restart)</string>
+    <string name="config_resolution">Resolution</string>
+    <string name="config_framerate">Frame Rate</string>
+    <string name="config_device_parameter">Device parameters</string>
+    <string name="config_device_uuid">Device UUID</string>
+    <string name="config_device_position">Device position</string>
+    <string name="config_face_capture">Face Capture</string>
+    <string name="config_capture_to_file">To file</string>
+    <string name="config_capture_to_server">To http server</string>
+    <string name="config_capture_server_addr">Http server address</string>
+    <string name="config_orion_cloud">Orion Cloud</string>
+    <string name="config_cloud_mode">Cloud mode</string>
+    <string name="config_cloud_app_key">App key</string>
+    <string name="config_cloud_app_secret">App secret</string>
+    <string name="config_cloud_addr">Server address</string>
+    <string name="config_cloud_port">Server port</string>
+    <string name="config_app_setting">App Settings</string>
+    <string name="config_app_portait_mode">Portrait mode</string>
+    <string name="config_app_debug_window">Debug Log Switch</string>
+    <string name="config_app_identification_source">Identification Source</string>
+    <string name="config_app_sdk_log_level">SDK Log Level</string>
+    <string name="config_app_mjpg_check">MJPG snapshot check</string>
+    <string name="config_app_auto_open_hid">Enable HID Protocol</string>
+    <string name="config_app_hw_decode">Hardware decoding</string>
+    <string name="config_information">Other information</string>
+    <string name="config_info_camera">Camera info</string>
+    <string name="config_info_app">App info</string>
+    <string name="config_tip_restart_app">Effective after restart</string>
+    <string name="config_tip_no_need_http">No need to add prefix \"http://\"</string>
+    <string name="reg_face_tip_already_reg">The user(%s) is already registered and is %d similar to %s</string>
+    <string name="reg_face_tip_input_name">Input name:</string>
+    <string name="reg_face_tip_err_database">Registration failed: database error</string>
+    <string name="reg_user_pin_already_regist">%s is already used</string>
+    <string name="reg_face_tip_empty_name">Name is empty.</string>
+    <string name="reg_face_tip_empty_pin">Job number is empty</string>
+    <string name="reg_face_tip_cancel_reg">Cancel registration</string>
+    <string name="reg_face_tip_reg_ok_name">Registered successfully:%s %s</string>
+    <string name="reg_face_send_img_fail">Failed to send image</string>
+    <string name="reg_face_tip_cmd_err">Failed to run command.</string>
+    <string name="reg_face_tip_no_face">Face not detected</string>
+    <string name="reg_face_tip_small_face">Face image size is too small</string>
+    <string name="reg_face_tip_poor_quality">Face image quality is too poor</string>
+    <string name="reg_face_tip_feature_len_err">Incorrect feature length</string>
+    <string name="reg_face_tip_cutout_err">Face cutout error</string>
+    <string name="reg_face_tip_err_database2">Database operation failed</string>
+    <string name="reg_face_tip_face_detect_fail">Face detection failed</string>
+    <string name="camcfg_upgrade_prepare_tip">Send a preparation command, continue?</string>
+    <string name="camcfg_upgrade_reboot_tip">Need to reboot UVC before update, continue?</string>
+    <string name="camcfg_rotation_mode_change_tip">Need to restart UVC before update, continue?</string>
+    <string name="reg_face_tip_pose_too_big">Face image angle is too big</string>
+    <string name="tip_algo_ver_error">Incorrect algorithm version, please update the settings!</string>
+    <string name="nav_title_face_manage">Face Management</string>
+    <string name="display_display_setting_title">Display Settings</string>
+    <string name="system_setting_title">System Settings</string>
+    <string name="bio_recognize_setting_title">Biometric parameters</string>
+    <string name="display_setting_image_mirror">Mirror</string>
+    <string name="display_setting_image_flip">Flip</string>
+    <string name="display_setting_mirror_flip_hint">Portrait is upside down.</string>
+    <string name="hint_pls_input_threshold">Please input the threshold</string>
+    <string name="enable_usb_heart">Enable USB heartbeat</string>
+    <string name="tip_pls_input_your_name">Please input your name</string>
+    <string name="setting_title_led_ctrl">IR Led control</string>
+    <string name="setting_title_led_ctrl_tip">Enable IR Led</string>
+    <string name="tips_uvc_cmd_execute">UVC command execution</string>
+    <string name="tips_send">Send</string>
+    <string name="tips_clear">Clear</string>
+    <string name="palm_capture_register">Register palm</string>
+    <string name="snap_shot_rgb_title">RGB Image capture</string>
+    <string name="snap_shot_gray_title">NIR Image capture</string>
+    <string name="title_motion_detect">Motion detection settings</string>
+    <string name="brightness_threshold">Brightness threshold</string>
+    <string name="idle_time_out">Idle timeout</string>
+    <string name="motion_detect_enable">Enable motion detection</string>
+    <string name="motion_sensitivity">Motion detection sensitivity</string>
+    <string name="system_upgrade_config">System Upgrade Configuration</string>
+    <string name="app_config">Application Settings</string>
+    <string name="palm_image_quality">Palm image quality threshold</string>
+    <string name="palm_fun_on_switch">Enable palm recognition</string>
+    <string name="palm_recognize_title">Palm recognition settings</string>
+    <string name="face_capture_filter_title">Face Capture Filter Settings</string>
+    <string name="common_setting_title">Common Settings</string>
+    <string name="device_setting_title" translatable="false">Device Settings</string>
+    <string name="rgb_liveness_title">RGB Liveness</string>
+    <string name="nir_liveness_title">NIR Liveness</string>
+    <string name="face_attr_recognize_interval">Face Attribute Recognize Interval</string>
+    <string name="liveness_threshold">Liveness Threshold</string>
+    <string name="single_lens_liveness_threshold">Single Lens Liveness Threshold</string>
+    <string name="dual_lens_liveness_threshold">Dual Lens Liveness Threshold</string>
+    <string name="recognize_interval">Recognition interval(ms)</string>
+    <string name="attribute_recognize">Face Attribute Recognize</string>
+    <string name="attribute_track">Enable face tracking</string>
+    <string name="count_algorithm">Log algorithm excution time</string>
+    <string name="drwa_face_rect">Draw Face Rect On Frame </string>
+    <string name="palm_info_register">Palm information </string>
+    <string name="input_your_name">Please input your name</string>
+    <string name="snap_shot_failed">Snapshot failed!</string>
+    <string name="captureing">Capturing…</string>
+    <string name="register_complete">Registration completed, id=%d</string>
+    <string name="register_timeout">Registration timeout</string>
+    <string name="palm_similar_too_high">The palm is similar to %s, please try again.</string>
+    <string name="menu_hint_device_manage">Device Management</string>
+    <string name="menu_system_setup">System Settings</string>
+    <string name="biometeric_parameter_setup">Biometric Parameters</string>
+    <string name="palm_recognize_width">Width setting for palm recognition</string>
+    <string name="pam_recognize_height">Height setting for palm recognition</string>
+    <string name="palm_recognize_template_quality_thr">Template quality threshold of palm recognition</string>
+    <string name="debug_level">Module log level</string>
+    <string name="palm_recognize_threshold">Palm recognition threshold</string>
+    <string name="merge_tamplate_failed">Failed to merge template,%d</string>
+    <string name="cancel_operation">Cancel</string>
+    <string name="change_liveness_need_reboot">Please restart module after updating liveness settings</string>
+    <string name="hint_pls_input_user_id">User ID</string>
+    <string name="num_and_english" translatable="false">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="invalid_data">Invalid Data</string>
+    <string name="exit_app">Exit</string>
+    <string name="register_failed">Registration failed</string>
+    <string name="send_cmd">Send</string>
+    <string name="clear_log">Clear</string>
+    <string name="remote_user_manage">User management on the module</string>
+    <string name="match_inside_switch">Internal alignment</string>
+    <string name="match_inside">Internal comparison</string>
+    <string name="clear_module_user">Clear users on the module</string>
+    <string name="sync_local_to_module">Sync user data to the module</string>
+    <string name="get_all_user_from_module">Read user from the module</string>
+    <string name="statistic_module_user">User statistics in module</string>
+    <string name="user_detail">User Details</string>
+    <string name="face">Face</string>
+    <string name="palm">Palm</string>
+    <string name="enroll_title">%s is enrolled.</string>
+    <string name="un_know">Unregistered</string>
+    <string name="next_step">Next step</string>
+    <string name="base_info_collect">User Info</string>
+    <string name="info_collect">Add a new user</string>
+    <string name="add_new_user">Add a new user</string>
+    <string name="user_id">User ID:</string>
+    <string name="user_name">Name   :</string>
+    <string name="hid_no_result">No result for HID</string>
+    <string name="hid_sned_failed">Please sync HID connection</string>
+    <string name="detect_no_face">No face is detected</string>
+    <string name="face_too_small">Face image size is too small,[%.1f,%.1f]</string>
+    <string name="face_quality_too_bad">Face image quality is too poor,[%.1f,%.1f]</string>
+    <string name="face_blur_too_high">Face blur is too high,[%.1f,%.1f]</string>
+    <string name="face_yaw_pose_too_big">yaw degree too big,[%.1f,%.1f]</string>
+    <string name="face_pitch_pose_too_big">pitch degree too big,[%.1f,%.1f]</string>
+    <string name="face_roll_pose_too_big">roll degree too big,[%.1f,%.1f]</string>
+    <string name="face_already_registered">Face has been registered by %s,[%.1f,%.1f]</string>
+    <string name="json_analyse_failed">Abnormal data format</string>
+    <string name="palm_already_register">Palm has been registered by %s,[%.1f,%.1f]</string>
+    <string name="palm_already_in_module">Palm has been registered in module</string>
+    <string name="face_already_in_module">Face has been registered in module</string>
+    <string name="palm_do_not_move">Please keep your palms still</string>
+    <string name="face_do_not_move">Please keep your face still</string>
+    <string name="set_your_avatar">Set Avatar</string>
+    <string name="take_photo">Take a photo</string>
+    <string name="remake_photo">Retake a photo</string>
+    <string name="confirm">Confirm</string>
+    <string name="choose_register_way">Registration Mode</string>
+    <string name="local_image">Local photos</string>
+    <string name="camera">Module camera</string>
+    <string name="module_inside_register">Registraion on the module</string>
+    <string name="snap_shot_register">SnapShot from the module(stored locally)</string>
+    <string name="pick_photo">Select photos</string>
+    <string name="pls_choose_photo_first">Please select a photo</string>
+    <string name="registering">Registering</string>
+    <string name="click_register_from_internal">Click to register from inside the module</string>
+    <string name="snapshot">SnapShot</string>
+    <string name="register_in_module_with_photo">Register by photo</string>
+    <string name="register_face_in_module_by_cacheId">Register face on the module by cacheID</string>
+    <string name="register_palm_in_module_by_cacheId">Register palm on the module by cacheID</string>
+    <string name="register_success">Registered successfully</string>
+    <string name="success" translatable="false">success</string>
+    <string name="add_face">Add face</string>
+    <string name="add_palm">Add palm</string>
+    <string name="not_detect_palm">Please move the palm to the center of the image</string>
+    <string name="merge_palm_failed">Failed to merger palm templates</string>
+    <string name="pls_confirm">Please confirm</string>
+    <string name="quality_bad_continue_register">Face image quality is poor, continue?</string>
+    <string name="keep_your_posture">Keep the distance and adjust the angle slightly</string>
+    <string name="cache_id_ready_click_confirm">CacheId is created, click confirm to add</string>
+    <string name="no_palm_detect_click_add_continue">No palm detected, please show your palm to the camera and click the Add button</string>
+    <string name="no_face_detect_move_face_and_click_add">No face detected, please show your face to the camera and click the Add button</string>
+    <string name="register_palm_in_module_with_photo">Register palm by photo</string>
+    <string name="register_enable_camera_preview">Enable camera preview </string>
+    <string name="infrared_image_format">SnapShot Near-Infrared Picture Format</string>
+    <string name="bitmap_decode_failed">Failed to read the image</string>
+    <string name="return_image_when_register">Return image during registration</string>
+    <string name="return_template_when_register">Return biometric template during registration</string>
+    <string name="return_info_when_register">Return face/palm information during registration </string>
+    <string name="enable_disable_match_by_face_id">Enable match by faceID</string>
+    <string name="is_enable_attendance_log_save_in_module">Enable to save attendance record</string>
+    <string name="save_attendance_log">Save time and attendance record</string>
+    <string name="is_enable_strange_att_log">Eable to save unregistered attendance record</string>
+    <string name="is_enable_store_enroll_photo">Enable to save the enrolled photo on module</string>
+    <string name="save_strange_att_Log">Save unregistered attendance record</string>
+    <string name="save_enroll_photo">Save enrolled photo on module</string>
+    <string name="module_restore_factory">Restore module factory settings</string>
+    <string name="restore_factory">Reset</string>
+    <string name="module_reset_factory">Restore module factory settings?</string>
+    <string name="confirm_sync_time_title">Synchronize Time?</string>
+    <string name="sync_time">Synchronize time</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="sync_time_message">Attendance function only works properly after time sync</string>
+    <string name="sync_success">Time synced successfully</string>
+    <string name="sync_failed">Failed to sync time</string>
+    <string name="tips_test_mode">Attribute data and photo will be saved in test mode</string>
+    <string name="test_mode">Test mode</string>
+    <string name="sync_time_tips">Click to sync the current time to the module</string>
+    <string name="sysc_time">Time sync</string>
+    <string name="identify_success">Success!</string>
+    <string name="about">About</string>
+    <string name="multimodel_biometrics_ndemo_nfor_face_and_palm" translatable="false">Multi Modal\n Biometrics\nDemo\n</string>
+    <string name="health_biometrics" translatable="false">Health Biometrics</string>
+    <string name="settings">Settings</string>
+    <string name="note">Note</string>
+    <string name="pause">Pause</string>
+    <string name="face_recognition">Face Recognition</string>
+    <string name="palm_recognition">Palm Recognition</string>
+    <string name="stop">Stop</string>
+    <string name="note_content" translatable="false">For Face Recognition:\n Please face at the module for \nidentification. \n\nFor Palm Recognition:\n Please keep your palm about\n 6 to 15 inches from the reader.\n</string>
+    <string name="identify_once">Single\nMatch</string>
+    <string name="identify_const">Continuous\nMatch</string>
+    <string name="prepare_to_enroll_face">Please remove any masks,sun glasses or facial obstructions</string>
+    <string name="prepare_to_enroll_palm">Please move the palm to the center of the image</string>
+    <string name="face_and_palm_standalone_device_demo" translatable="false">Face and Palm Standalone Device Demo</string>
+    <string name="palm_identify_interval">Palm Identify Interval(s)</string>
+    <string name="palm_ae">PalmAE</string>
+    <string name="palm_liveness">Palm Liveness</string>
+    <string name="palm_liveness_threshold">Palm Liveness Threshold</string>
+    <string name="min_palm_size">Min Detect Palm Size </string>
+    <string name="attend_interval">Attendance Interval</string>
+    <string name="tool_panel_module_users">Module Users</string>
+    <string name="loading_user">Loading user</string>
+    <string name="tips_please_choose_another_image">Please select an image with an aspect ratio of 9:16. Recommend 720x1280</string>
+    <string name="tips_add_user_success">Add user %s success</string>
+    <string name="tips_add_user_failed">Add user failed</string>
+    <string name="tips_user_exist">User already exists</string>
+    <string name="tips_delete_user">Are you sure you want to delete this user?</string>
+    <string name="prepare_enroll_face">Start in %d seconds, please adjust the face position to the registration area</string>
+    <string name="prepare_enroll_palm">Start in %d seconds, please adjust the palm position to the registration area</string>
+    <string name="host">Host recognize threshold </string>
+    <string name="host_face_identify_threshold">Host default face identify threshold</string>
+    <string name="host_palm_recognize_threshold">Host visible palm recognize threshold</string>
+    <string name="host_face_registration_quality">Host face registration quality threshold</string>
+    <string name="display_face_pose_info">Display Face Pose Info</string>
+    <string name="display_age_attribute">Display Age Attribute</string>
+    <string name="display_gender_attribute">Display Gender Attribute</string>
+    <string name="display_expression_attribute">Display Expression Attribute</string>
+    <string name="display_mustache_attribute">Display Mustache Attribute</string>
+    <string name="display_glasses_attribute">Display Glasses Attribute</string>
+    <string name="display_hat_attribute">Display Hat Attribute</string>
+    <string name="display_mask_attribute">Display Mask Attribute</string>
+    <string name="config_show_faceinfo_hint">Display UserName On Face Rect</string>
+    <string name="enroll_need_same_palm">Please use the same palm to enroll</string>
+    <string name="enroll_need_same_face">Please use the same face to enroll</string>
+    <string name="max_face_enable">Only recognize max face</string>
+    <string name="max_face_enable_tips">If enabled, only the largest face will be recognized.Otherwise, multiple faces are recognized.</string>
+    <string name="push_photo_enable">Enable Feature Photo Push </string>
+    <string name="push_photo_enable_tips">If enabled, the picture which extract feature will push with feature.</string>
+    <string name="upgrade_img_hint">After confirming, please stay on this page and wait for the img file to be selected</string>
+    <string name="tips_pls_move_face_to_enroll_area">Please move your face to the green registration area</string>
+    <string name="tips_pls_move_palm_to_enroll_area">Please move your palm to the green registration area</string>
+    <string name="version_not_match_tips">The module system version(%1$s) is not the latest version, please contact technical support to upgrade to the latest image. Otherwise, some functions will have compatibility issues.</string>
+    <string name="switch_video_stream_mode_warning">The current VideoStreamMode may not display properly after switching. Please confirm whether to continue switching?</string>
+    <string name="title_warning">Warning</string>
+    <string name="face_detect_height_range">Face detection height range</string>
+    <string name="face_detect_width_range">Face detection width range</string>
+    <string name="face_pitch_range">Face pitch range</string>
+    <string name="face_roll_range">Face roll range</string>
+    <string name="face_yaw_range">Face yaw range</string>
+    <string name="draw_palm_rect_when_identify">Draw Palm Rect When Identify</string>
+    <string name="max_identify_failed_count">Max Identify Failed Count</string>
+    <string name="identify_info_stay_time">Identify Info Stay Time(ms)</string>
+    <string name="green_indicator_lighting_duration">Green Indicator Lighting Duration(ms)</string>
+    <string name="red_indicator_lighting_duration">Red Indicator Lighting Duration(ms)</string>
+    <string name="tips_batch_enroll_palm_from_file">Enroll palms from file</string>
+    <string name="tips_batch_enroll_palm_by_photo">Enroll palms from picture</string>
+    <string name="tips_batch_import_face_from_db">Import face from DB file</string>
+    <string name="tips_batch_import_face_from_face_mx_csv">Import face from FaceMX CSV file</string>
+    <string name="face_suspected_fake_attack">Suspected fake face attack,[%.1f,%.1f]</string>
+    <string name="palm_suspected_fake_attack">Suspected fake palm attack,[%.1f,%.1f]</string>
+    <string name="hid_comm_exception">HID communication abnormality, please check the connection or device USB communication abnormality</string>
+    <string name="draw_palm_rect_when_identify_hint">When turned on, the frame will be drawn only if the palm is recognized.</string>
+    <string name="batch_adding_palms">Batch Adding palms</string>
+    <string name="export_user" translatable="false">Export User</string>
+    <string name="power_save_mode_hint">If enable, if no valid information is detected within 10S, it will enter standby mode.</string>
+    <string name="power_save_mode">Power Save Mode</string>
+    <string name="card">Card</string>
+    <string name="please_swipe_card">Please swipe card</string>
+    <string name="detect_too_much_face">More than 1 face detected</string>
+    <string name="needs_two_feature">Please perform step 1 to extract the template to be compared first.</string>
+    <string name="hid_failed">HID command failed,error = %d</string>
+    <string name="do_as_tips">Please follow the prompts</string>
+    <string name="step1_extract_the_face_template1">Step1.\nExtract facial feature values to be verified</string>
+    <string name="press_to_extract">Press to Extract</string>
+    <string name="step2_verify_the_face_template">Step2.\nVerify the face template</string>
+    <string name="press_to_verify">Press to Verify</string>
+    <string name="step_1_needs_fisrt">Please do the first step first</string>
+    <string name="step_2_needs_execute">Please verify your face</string>
+    <string name="face_1v1" translatable="false">Face 1V1</string>
+    <string name="copyright_armatura_llc_all_rights_reserved" translatable="false">Copyright © 2025 ARMATURA LLC. All rights reserved.</string>
+    <string name="clear">clear</string>
+    <string name="user_pin">user pin</string>
+    <string name="face_settings_title">Face Settings</string>
+    <string name="liveness_mode">LivenessMode</string>
+    <string name="palm_template_mode">Palm Template Mode</string>
+    <string name="unsupported_option">The module does not support these options: %s</string>
+    <string name="log_view">Check logs</string>
+    <string name="log_connect_history">Connection history</string>
+    <string name="log_recuse">Recuse history</string>
+    <string name="log_watch_dog">Watch dog history</string>
+    <string name="log_kernel">Watch module kernel log</string>
+    <string name="log_firmware">Watch module firmware log</string>
+    <string name="log_view_hint">Click to view logs</string>
+    <string name="drawer_open">draw open</string>
+    <string name="drawer_close">draw close</string>
+    <string name="detection_distance">Detection Distance</string>
+</resources>

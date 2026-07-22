@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CustomSettingLayout">
+        <attr name="setting_title" format="string" />
+        <attr name="setting_hint" format="string" />
+        <attr name="setting_value" format="string" />
+        <attr name="setting_key" format="string" />
+        <attr name="ic_edit_visible" format="boolean" />
+        <attr name="bottom_line_visible" format="boolean" />
+        <attr name="setting_spinner_entries" format="reference" />
+        <attr name="isChecked" format="boolean" />
+        <attr name="max" format="integer" />
+        <attr name="min" format="integer" />
+        <attr name="negative" format="boolean" />
+        <attr name="rewrite" format="boolean" />
+    </declare-styleable>
+</resources>

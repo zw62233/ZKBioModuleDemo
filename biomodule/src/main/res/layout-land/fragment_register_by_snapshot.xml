@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:MyToolBar="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.armatura.biomodule.view.ToolBar
+            android:id="@+id/my_tool_bar"
+            style="@style/tool_bar_with_back_style"
+            MyToolBar:layout_constraintEnd_toEndOf="parent"
+            MyToolBar:layout_constraintStart_toStartOf="parent"
+            MyToolBar:layout_constraintTop_toTopOf="parent"
+            MyToolBar:left_button_visible="true"
+            MyToolBar:right_button_visible="false" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            MyToolBar:layout_constraintBottom_toTopOf="@id/ll_status"
+            MyToolBar:layout_constraintEnd_toEndOf="parent"
+            MyToolBar:layout_constraintStart_toStartOf="parent"
+            MyToolBar:layout_constraintTop_toBottomOf="@id/my_tool_bar">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/center_guide_line"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                MyToolBar:layout_constraintGuide_percent="0.5" />
+
+
+            <ImageView
+                android:id="@+id/pick_image_iv"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:src="@drawable/default_avatar"
+                MyToolBar:layout_constraintBottom_toBottomOf="parent"
+                MyToolBar:layout_constraintDimensionRatio="6:19"
+                MyToolBar:layout_constraintEnd_toEndOf="@id/center_guide_line"
+                MyToolBar:layout_constraintHorizontal_weight="1"
+                MyToolBar:layout_constraintStart_toStartOf="parent"
+                MyToolBar:layout_constraintTop_toTopOf="parent" />
+
+
+            <LinearLayout
+                android:id="@+id/btn_ll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                MyToolBar:layout_constraintBottom_toBottomOf="parent"
+                MyToolBar:layout_constraintEnd_toEndOf="parent"
+                MyToolBar:layout_constraintHorizontal_weight="1"
+                MyToolBar:layout_constraintStart_toStartOf="@id/center_guide_line"
+                MyToolBar:layout_constraintTop_toTopOf="parent">
+
+                <Button
+                    android:id="@+id/snap_shot_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/bg_light_blue"
+                    android:text="@string/snapshot"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/confirm_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/bg_light_blue"
+                    android:text="@string/confirm"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_status"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation="vertical"
+            MyToolBar:layout_constraintBottom_toBottomOf="parent"
+            MyToolBar:layout_constraintEnd_toEndOf="parent"
+            MyToolBar:layout_constraintStart_toStartOf="parent">
+
+            <ProgressBar
+                android:id="@+id/register_progress_bar"
+                style="@style/ProgressBar_Mini"
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:id="@+id/register_status_tv"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:textColor="@color/light_green"
+                android:textSize="32sp" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
