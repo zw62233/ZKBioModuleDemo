@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="demo_description" translatable="false"> MultiModal Biometrics Demo\nFor AMT-PVS-50 Device</string>
+    <string-array name="sensor_frame_rate_array" translatable="false">
+        <item>25</item>
+    </string-array>
+</resources>

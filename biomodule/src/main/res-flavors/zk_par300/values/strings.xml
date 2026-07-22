@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="demo_description" translatable="false"> MultiModal Biometrics Demo\nFor ZK-PAR-300 Device</string>
+</resources>

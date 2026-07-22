@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/frame_layout_preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/amt_bg_color">
+
+            <RelativeLayout
+                android:id="@+id/tool_bar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/iv_menu"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/menu" />
+
+                <ImageView
+                    android:id="@+id/title_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/logo_fill_white"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_rotate_screen"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/rotate_screen_white" />
+            </RelativeLayout>
+
+            <SurfaceView
+                android:id="@+id/camera_preview_surface_view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@id/horizontal_guide_line_20"
+                app:layout_constraintDimensionRatio="720:1280"
+                app:layout_constraintEnd_toEndOf="@id/vertical_guide_line_80"
+                app:layout_constraintStart_toStartOf="@id/vertical_guide_line_20"
+                app:layout_constraintTop_toBottomOf="@+id/tool_bar_layout" />
+
+            <SurfaceView
+                android:id="@+id/rect_info_surface_view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/camera_preview_surface_view"
+                app:layout_constraintEnd_toEndOf="@+id/camera_preview_surface_view"
+                app:layout_constraintStart_toStartOf="@+id/camera_preview_surface_view"
+                app:layout_constraintTop_toTopOf="@+id/camera_preview_surface_view" />
+
+            <com.armatura.biomodule.view.CircleDetectView
+                android:id="@+id/circle_reflect_view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/camera_preview_surface_view"
+                app:layout_constraintEnd_toEndOf="@+id/camera_preview_surface_view"
+                app:layout_constraintStart_toStartOf="@+id/camera_preview_surface_view"
+                app:layout_constraintTop_toTopOf="@+id/camera_preview_surface_view" />
+
+            <ImageView
+                android:id="@+id/iv_identify_state"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/ic_fail"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/circle_reflect_view"
+                app:layout_constraintEnd_toEndOf="@+id/circle_reflect_view"
+                app:layout_constraintStart_toStartOf="@+id/circle_reflect_view"
+                app:layout_constraintTop_toTopOf="@+id/circle_reflect_view" />
+
+            <TextView
+                android:id="@+id/tv_fps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textColor="#FF0000"
+                android:textSize="@dimen/text_size_30sp"
+                app:layout_constraintStart_toStartOf="@id/camera_preview_surface_view"
+                app:layout_constraintTop_toTopOf="@id/camera_preview_surface_view" />
+
+
+            <TextView
+                android:id="@+id/tv_cpu_temp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textColor="#FF0000"
+                android:textSize="@dimen/text_size_30sp"
+                app:layout_constraintStart_toStartOf="@id/camera_preview_surface_view"
+                app:layout_constraintTop_toBottomOf="@id/tv_fps" />
+
+            <TextView
+                android:id="@+id/tv_extra_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textColor="#FF0000"
+                android:textSize="@dimen/text_size_30sp"
+                app:layout_constraintStart_toStartOf="@id/camera_preview_surface_view"
+                app:layout_constraintTop_toBottomOf="@id/tv_cpu_temp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/identify_info_recycler_view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:padding="16dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/vertical_guide_line_80"
+                app:layout_constraintHeight_percent="0.3"
+                app:layout_constraintStart_toStartOf="@id/vertical_guide_line_20" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/vertical_guide_line_20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.1" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/vertical_guide_line_80"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.9" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/horizontal_guide_line_20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.8" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/nav_header_main"
+            app:menu="@menu/activity_main_drawer" />
+    </androidx.drawerlayout.widget.DrawerLayout>
+</layout>

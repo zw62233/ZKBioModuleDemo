@@ -1,0 +1,63 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/amt_bg_color</item>
+        <item name="colorPrimaryDark">@color/amt_bg_color</item>
+        <item name="colorAccent">@color/light_green</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="tool_bar_with_back_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/tool_bar_with_back_height</item>
+    </style>
+
+    <style name="dialog_full_screen">
+        <item name="android:windowFullscreen">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="SwitchButtonStyle">
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+    </style>
+
+    <style name="CustomInputDialogStyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="SubNameStyle_Port" parent="SubNameStyle">
+        <item name="android:paddingStart">2dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="SubNameStyle">
+        <item name="android:textColor">#EEEEEE</item>
+        <item name="android:background">#636363</item>
+        <item name="android:paddingEnd">2dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+
+    <!--progress bar stype-->
+    <style name="ProgressBar_Mini" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:maxHeight">5dp</item>
+        <item name="android:minHeight">3dp</item>
+    </style>
+</resources>
