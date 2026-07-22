@@ -1,0 +1,23 @@
+android {
+
+    signingConfigs {
+        DEMO {
+            storeFile file("../signature/demo.jks")
+            storePassword "123456"
+            keyAlias "123456"
+            keyPassword "123456"
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.DEMO
+            debuggable true
+            manifestPlaceholders.put("SHARED_USER_ID", "")
+        }
+        release {
+            signingConfig signingConfigs.DEMO
+            manifestPlaceholders.put("SHARED_USER_ID", "")
+        }
+    }
+}
